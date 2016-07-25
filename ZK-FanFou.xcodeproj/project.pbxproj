@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F4C57F3109307C7582A37B /* libPods-ZK-FanFou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1169648C520EF22E38B134 /* libPods-ZK-FanFou.a */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
 		27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E11D45D651008ACED3 /* AppDelegate.m */; };
 		27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E41D45D651008ACED3 /* ViewController.m */; };
@@ -22,6 +23,7 @@
 		27D5B1031D45E7BE008ACED3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D5B1021D45E7BE008ACED3 /* Splash.storyboard */; };
 		27D5B1061D45F214008ACED3 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B1051D45F214008ACED3 /* SplashViewController.m */; };
 		27D5B10A1D45F9F4008ACED3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B1091D45F9F4008ACED3 /* LoginViewController.m */; };
+		27D5B10C1D460370008ACED3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 27D5B10B1D460370008ACED3 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		27D5B1051D45F214008ACED3 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		27D5B1081D45F9F4008ACED3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		27D5B1091D45F9F4008ACED3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		27D5B10B1D460370008ACED3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		5C1169648C520EF22E38B134 /* libPods-ZK-FanFou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZK-FanFou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68F2C8EBF54883DA4ED5A61C /* Pods-ZK-FanFou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZK-FanFou.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou.debug.xcconfig"; sourceTree = "<group>"; };
+		F7F12BB36283D8A16C68AFB3 /* Pods-ZK-FanFou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZK-FanFou.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F4C57F3109307C7582A37B /* libPods-ZK-FanFou.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +69,11 @@
 		27D5B0D11D45D651008ACED3 = {
 			isa = PBXGroup;
 			children = (
+				27D5B10B1D460370008ACED3 /* Podfile */,
 				27D5B0DC1D45D651008ACED3 /* ZK-FanFou */,
 				27D5B0DB1D45D651008ACED3 /* Products */,
+				9F543D08240A8EC536A29C34 /* Pods */,
+				B9D618A686A25C72CC459AFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +144,23 @@
 			name = Splash;
 			sourceTree = "<group>";
 		};
+		9F543D08240A8EC536A29C34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68F2C8EBF54883DA4ED5A61C /* Pods-ZK-FanFou.debug.xcconfig */,
+				F7F12BB36283D8A16C68AFB3 /* Pods-ZK-FanFou.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9D618A686A25C72CC459AFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C1169648C520EF22E38B134 /* libPods-ZK-FanFou.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D5B0F11D45D651008ACED3 /* Build configuration list for PBXNativeTarget "ZK-FanFou" */;
 			buildPhases = (
+				2A841799FB634EE482571DA3 /* [CP] Check Pods Manifest.lock */,
 				27D5B0D61D45D651008ACED3 /* Sources */,
 				27D5B0D71D45D651008ACED3 /* Frameworks */,
 				27D5B0D81D45D651008ACED3 /* Resources */,
+				3E4B25374988E1AE5DFC5AF5 /* [CP] Embed Pods Frameworks */,
+				E292E4A123260BB4ABD34D9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,10 +231,59 @@
 				27D5B0EA1D45D651008ACED3 /* Assets.xcassets in Resources */,
 				27D5B0FF1D45E3CD008ACED3 /* Message.storyboard in Resources */,
 				27D5B0E81D45D651008ACED3 /* Main.storyboard in Resources */,
+				27D5B10C1D460370008ACED3 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A841799FB634EE482571DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E4B25374988E1AE5DFC5AF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E292E4A123260BB4ABD34D9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27D5B0D61D45D651008ACED3 /* Sources */ = {
@@ -327,6 +406,7 @@
 		};
 		27D5B0F21D45D651008ACED3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F2C8EBF54883DA4ED5A61C /* Pods-ZK-FanFou.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZK-FanFou/Info.plist";
@@ -338,6 +418,7 @@
 		};
 		27D5B0F31D45D651008ACED3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F12BB36283D8A16C68AFB3 /* Pods-ZK-FanFou.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZK-FanFou/Info.plist";
@@ -366,6 +447,7 @@
 				27D5B0F31D45D651008ACED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
