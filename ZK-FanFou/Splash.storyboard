@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FIp-6Q-prr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="EXk-Qj-dVV">
+            <objects>
+                <viewController id="fgq-vS-srW" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GFM-au-dIL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oq6-5r-bq2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sYT-5z-bxr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n73-8g-8N2"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="Ig9-OZ-LC9" kind="presentation" identifier="LoginSegue" id="13X-3D-JPo"/>
+                        <segue destination="PPv-w2-hvg" kind="presentation" identifier="MainSegue" id="xd5-FZ-LYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-a2-HSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777.5" y="233.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mHC-aI-GrH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FIp-6Q-prr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5iW-Ma-Nbf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fgq-vS-srW" kind="relationship" relationship="rootViewController" id="mwj-aw-C5P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qy6-6v-51h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="234"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="P1F-ma-SNh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="PPv-w2-hvg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujj-pP-9g0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883.5" y="727"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Akl-a3-7FD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Ig9-OZ-LC9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYD-LD-L7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.5" y="727"/>
+        </scene>
+    </scenes>
+</document>

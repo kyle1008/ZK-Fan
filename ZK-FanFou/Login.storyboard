@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wcj-96-vJu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="0Jf-KZ-snu">
+            <objects>
+                <viewController id="ekK-EM-DPQ" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qBZ-Jb-P0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="qkT-ZL-Lfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zWN-8w-GfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-92-gEM">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="br1-7W-v9z">
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="G5b-92-gEM" secondAttribute="trailing" id="0lQ-Qz-yof"/>
+                            <constraint firstItem="G5b-92-gEM" firstAttribute="leading" secondItem="zWN-8w-GfG" secondAttribute="leadingMargin" id="aA4-bt-9eT"/>
+                            <constraint firstItem="br1-7W-v9z" firstAttribute="trailing" secondItem="G5b-92-gEM" secondAttribute="trailing" id="j5c-pU-Wzc"/>
+                            <constraint firstItem="G5b-92-gEM" firstAttribute="top" secondItem="qBZ-Jb-P0f" secondAttribute="bottom" constant="20" id="jAB-Tn-M0l"/>
+                            <constraint firstItem="br1-7W-v9z" firstAttribute="leading" secondItem="G5b-92-gEM" secondAttribute="leading" id="xDQ-78-l9q"/>
+                            <constraint firstItem="br1-7W-v9z" firstAttribute="top" secondItem="G5b-92-gEM" secondAttribute="bottom" constant="20" id="xvC-2s-cCc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jww-am-fCo">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="3iS-oC-OYm"/>
+                        <barButtonItem key="rightBarButtonItem" title="登陆" id="ALg-J1-8Q5">
+                            <connections>
+                                <action selector="login:" destination="ekK-EM-DPQ" id="jhn-bH-FQP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qbn-dH-o3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.5" y="360.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EIM-fr-FNO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wcj-96-vJu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Wg-lU-E9B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ekK-EM-DPQ" kind="relationship" relationship="rootViewController" id="ZPT-JQ-Flh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wg-nr-KOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.5" y="360.5"/>
+        </scene>
+    </scenes>
+</document>
