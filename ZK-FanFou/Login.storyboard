@@ -48,10 +48,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="AzE-Wx-veJ" kind="presentation" identifier="ShowAccountsSegue" id="bXP-AX-ImO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbn-dH-o3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861.5" y="360.5"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="5wM-A1-XG2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Accounts" id="AzE-Wx-veJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMQ-Br-Ere" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245.5" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIM-fr-FNO">

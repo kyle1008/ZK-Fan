@@ -16,8 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //主线程
+    
+    NSLog(@"1");
+    //不阻塞当前主线程执行
     dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
         BOOL isUserExist = NO;
         if (isUserExist) {
             [self performSegueWithIdentifier:@"MainSegue" sender:nil];
@@ -25,6 +28,7 @@
             [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
         }
     });
+    NSLog(@"3");
                   
 }
 

@@ -14,6 +14,11 @@
 
 @implementation LoginViewController
 - (IBAction)login:(UIBarButtonItem *)sender {
+    // 判断账户合法性
+    //login sucess
+    [self performSegueWithIdentifier:@"ShowAccountsSegue" sender:nil];
+    //login fail
+    
 }
 
 

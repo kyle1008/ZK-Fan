@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		20F4C57F3109307C7582A37B /* libPods-ZK-FanFou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1169648C520EF22E38B134 /* libPods-ZK-FanFou.a */; };
+		27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A141D473F0200A50A33 /* UserTableViewCell.m */; };
+		27265A1B1D4743E600A50A33 /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A1A1D4743E600A50A33 /* AccountsTableViewController.m */; };
+		27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A1E1D47455500A50A33 /* CoreDataStack.m */; };
+		27265A221D4748F400A50A33 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27265A201D4748F400A50A33 /* Model.xcdatamodeld */; };
+		27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A241D47558400A50A33 /* User+CoreDataProperties.m */; };
+		27265A281D47558400A50A33 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A261D47558400A50A33 /* User.m */; };
+		27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A2B1D47560000A50A33 /* CoreDataStack+User.m */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
 		27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E11D45D651008ACED3 /* AppDelegate.m */; };
 		27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E41D45D651008ACED3 /* ViewController.m */; };
@@ -27,6 +34,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27265A131D473F0200A50A33 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		27265A141D473F0200A50A33 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		27265A191D4743E600A50A33 /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
+		27265A1A1D4743E600A50A33 /* AccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsTableViewController.m; sourceTree = "<group>"; };
+		27265A1D1D47455500A50A33 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		27265A1E1D47455500A50A33 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		27265A211D4748F400A50A33 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		27265A231D47558400A50A33 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		27265A241D47558400A50A33 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		27265A251D47558400A50A33 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		27265A261D47558400A50A33 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		27265A2A1D47560000A50A33 /* CoreDataStack+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+User.h"; sourceTree = "<group>"; };
+		27265A2B1D47560000A50A33 /* CoreDataStack+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+User.m"; sourceTree = "<group>"; };
 		27D5B0DA1D45D651008ACED3 /* ZK-FanFou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZK-FanFou.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5B0DE1D45D651008ACED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27D5B0E01D45D651008ACED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +68,7 @@
 		27D5B1051D45F214008ACED3 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		27D5B1081D45F9F4008ACED3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		27D5B1091D45F9F4008ACED3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		27D5B10B1D460370008ACED3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		27D5B10B1D460370008ACED3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5C1169648C520EF22E38B134 /* libPods-ZK-FanFou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZK-FanFou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F2C8EBF54883DA4ED5A61C /* Pods-ZK-FanFou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZK-FanFou.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou.debug.xcconfig"; sourceTree = "<group>"; };
 		F7F12BB36283D8A16C68AFB3 /* Pods-ZK-FanFou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZK-FanFou.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZK-FanFou/Pods-ZK-FanFou.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,12 +86,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27265A1C1D47452300A50A33 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				27265A291D47559100A50A33 /* Model */,
+				27265A1D1D47455500A50A33 /* CoreDataStack.h */,
+				27265A1E1D47455500A50A33 /* CoreDataStack.m */,
+				27265A2A1D47560000A50A33 /* CoreDataStack+User.h */,
+				27265A2B1D47560000A50A33 /* CoreDataStack+User.m */,
+				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		27265A291D47559100A50A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27265A231D47558400A50A33 /* User+CoreDataProperties.h */,
+				27265A241D47558400A50A33 /* User+CoreDataProperties.m */,
+				27265A251D47558400A50A33 /* User.h */,
+				27265A261D47558400A50A33 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		27D5B0D11D45D651008ACED3 = {
 			isa = PBXGroup;
 			children = (
 				27D5B10B1D460370008ACED3 /* Podfile */,
 				27D5B0DC1D45D651008ACED3 /* ZK-FanFou */,
-				27D5B0DB1D45D651008ACED3 /* Products */,
 				9F543D08240A8EC536A29C34 /* Pods */,
 				B9D618A686A25C72CC459AFF /* Frameworks */,
 			);
@@ -83,21 +126,24 @@
 				27D5B0DA1D45D651008ACED3 /* ZK-FanFou.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		27D5B0DC1D45D651008ACED3 /* ZK-FanFou */ = {
 			isa = PBXGroup;
 			children = (
-				27D5B1071D45F225008ACED3 /* Splash */,
+				27265A1C1D47452300A50A33 /* CoreData */,
 				27D5B0E01D45D651008ACED3 /* AppDelegate.h */,
 				27D5B0E11D45D651008ACED3 /* AppDelegate.m */,
 				27D5B0E31D45D651008ACED3 /* ViewController.h */,
 				27D5B0E41D45D651008ACED3 /* ViewController.m */,
+				27D5B1071D45F225008ACED3 /* Splash */,
 				27D5B0FB1D45E1B1008ACED3 /* Main */,
 				27D5B0F61D45D6E8008ACED3 /* Login */,
 				27D5B0E91D45D651008ACED3 /* Assets.xcassets */,
 				27D5B0EB1D45D651008ACED3 /* LaunchScreen.storyboard */,
 				27D5B0EE1D45D651008ACED3 /* Info.plist */,
+				27D5B0DB1D45D651008ACED3 /* Products */,
 				27D5B0DD1D45D651008ACED3 /* Supporting Files */,
 			);
 			path = "ZK-FanFou";
@@ -118,6 +164,10 @@
 				27D5B1081D45F9F4008ACED3 /* LoginViewController.h */,
 				27D5B1091D45F9F4008ACED3 /* LoginViewController.m */,
 				27D5B0F71D45D840008ACED3 /* Accounts.storyboard */,
+				27265A191D4743E600A50A33 /* AccountsTableViewController.h */,
+				27265A1A1D4743E600A50A33 /* AccountsTableViewController.m */,
+				27265A131D473F0200A50A33 /* UserTableViewCell.h */,
+				27265A141D473F0200A50A33 /* UserTableViewCell.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -290,10 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */,
+				27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */,
+				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
+				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
 				27D5B0DF1D45D651008ACED3 /* main.m in Sources */,
+				27265A281D47558400A50A33 /* User.m in Sources */,
+				27265A221D4748F400A50A33 /* Model.xcdatamodeld in Sources */,
 				27D5B1061D45F214008ACED3 /* SplashViewController.m in Sources */,
+				27265A1B1D4743E600A50A33 /* AccountsTableViewController.m in Sources */,
 				27D5B10A1D45F9F4008ACED3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +507,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27265A201D4748F400A50A33 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27265A211D4748F400A50A33 /* Model.xcdatamodel */,
+			);
+			currentVersion = 27265A211D4748F400A50A33 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27D5B0D21D45D651008ACED3 /* Project object */;
 }
