@@ -7,28 +7,37 @@
 //
 
 #import "LoginViewController.h"
-
+#import "Service.h"
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
 - (IBAction)login:(UIBarButtonItem *)sender {
+    NSLog(@"%s",__func__);
     // 判断账户合法性
     //login sucess
-    [self performSegueWithIdentifier:@"ShowAccountsSegue" sender:nil];
+    
+    [[Service sharedInstance] authoriseWithUserName:@"kongyunpeng2011@sina.com" password:@"1234" success:^(NSString *token, NSString *tokenSecret) {
+        [[Service sharedInstance] requestVerifyCredential:nil accessToken:token tokenSecret:tokenSecret requestMethod:@"GET" sucess:^(NSDictionary *result) {
+            
+            [self performSegueWithIdentifier:@"ShowAccountsSegue" sender:nil];
+        }];
+    }];
+    
     //login fail
     
 }
 
 
-
 - (void)viewDidLoad {
+    NSLog(@"%s",__func__);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
+    NSLog(@"%s",__func__);
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

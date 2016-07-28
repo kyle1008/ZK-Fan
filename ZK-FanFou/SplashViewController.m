@@ -15,9 +15,10 @@
 @implementation SplashViewController
 
 - (void)viewDidLoad {
+    NSLog(@"%s", __func__);
+    NSLog(@"1");
     [super viewDidLoad];
     
-    NSLog(@"1");
     //不阻塞当前主线程执行
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"2");
@@ -33,6 +34,8 @@
 }
 
 - (void)didReceiveMemoryWarning {
+    NSLog(@"%s", __func__);
+
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

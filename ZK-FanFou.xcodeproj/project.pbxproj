@@ -15,6 +15,13 @@
 		27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A241D47558400A50A33 /* User+CoreDataProperties.m */; };
 		27265A281D47558400A50A33 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A261D47558400A50A33 /* User.m */; };
 		27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A2B1D47560000A50A33 /* CoreDataStack+User.m */; };
+		274F40091D489EAA0055518E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F40081D489EAA0055518E /* CoreDataTableViewController.m */; };
+		278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750571D49EDE1000A5A15 /* TableViewCell.m */; };
+		2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TableViewCell.xib */; };
+		2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */; };
+		278750601D49F794000A5A15 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505E1D49F794000A5A15 /* Status.m */; };
+		27A9B84E1D487C1100B69BB9 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B84D1D487C1100B69BB9 /* Service.m */; };
+		27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B8501D487DDC00B69BB9 /* APIContant.m */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
 		27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E11D45D651008ACED3 /* AppDelegate.m */; };
 		27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0E41D45D651008ACED3 /* ViewController.m */; };
@@ -47,6 +54,19 @@
 		27265A261D47558400A50A33 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		27265A2A1D47560000A50A33 /* CoreDataStack+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+User.h"; sourceTree = "<group>"; };
 		27265A2B1D47560000A50A33 /* CoreDataStack+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+User.m"; sourceTree = "<group>"; };
+		274F40071D489EAA0055518E /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		274F40081D489EAA0055518E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		278750561D49EDE1000A5A15 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		278750571D49EDE1000A5A15 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		278750581D49EDE1000A5A15 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2787505B1D49F794000A5A15 /* Status+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Status+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Status+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2787505D1D49F794000A5A15 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		2787505E1D49F794000A5A15 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		27A9B84C1D487C1100B69BB9 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		27A9B84D1D487C1100B69BB9 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		27A9B84F1D487DDC00B69BB9 /* APIContant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIContant.h; sourceTree = "<group>"; };
+		27A9B8501D487DDC00B69BB9 /* APIContant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIContant.m; sourceTree = "<group>"; };
 		27D5B0DA1D45D651008ACED3 /* ZK-FanFou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZK-FanFou.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5B0DE1D45D651008ACED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27D5B0E01D45D651008ACED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,7 +114,7 @@
 				27265A1E1D47455500A50A33 /* CoreDataStack.m */,
 				27265A2A1D47560000A50A33 /* CoreDataStack+User.h */,
 				27265A2B1D47560000A50A33 /* CoreDataStack+User.m */,
-				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
+				274F400A1D489EBD0055518E /* Generic TVControllers */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -102,12 +122,48 @@
 		27265A291D47559100A50A33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2787505B1D49F794000A5A15 /* Status+CoreDataProperties.h */,
+				2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */,
+				2787505D1D49F794000A5A15 /* Status.h */,
+				2787505E1D49F794000A5A15 /* Status.m */,
+				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
 				27265A231D47558400A50A33 /* User+CoreDataProperties.h */,
 				27265A241D47558400A50A33 /* User+CoreDataProperties.m */,
 				27265A251D47558400A50A33 /* User.h */,
 				27265A261D47558400A50A33 /* User.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		274F400A1D489EBD0055518E /* Generic TVControllers */ = {
+			isa = PBXGroup;
+			children = (
+				274F40071D489EAA0055518E /* CoreDataTableViewController.h */,
+				274F40081D489EAA0055518E /* CoreDataTableViewController.m */,
+			);
+			name = "Generic TVControllers";
+			sourceTree = "<group>";
+		};
+		278750551D49ED2D000A5A15 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
+				278750561D49EDE1000A5A15 /* TableViewCell.h */,
+				278750571D49EDE1000A5A15 /* TableViewCell.m */,
+				278750581D49EDE1000A5A15 /* TableViewCell.xib */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		27A9B8521D487F4600B69BB9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				27A9B84C1D487C1100B69BB9 /* Service.h */,
+				27A9B84D1D487C1100B69BB9 /* Service.m */,
+				27A9B84F1D487DDC00B69BB9 /* APIContant.h */,
+				27A9B8501D487DDC00B69BB9 /* APIContant.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		27D5B0D11D45D651008ACED3 = {
@@ -132,11 +188,12 @@
 		27D5B0DC1D45D651008ACED3 /* ZK-FanFou */ = {
 			isa = PBXGroup;
 			children = (
-				27265A1C1D47452300A50A33 /* CoreData */,
 				27D5B0E01D45D651008ACED3 /* AppDelegate.h */,
 				27D5B0E11D45D651008ACED3 /* AppDelegate.m */,
 				27D5B0E31D45D651008ACED3 /* ViewController.h */,
 				27D5B0E41D45D651008ACED3 /* ViewController.m */,
+				27A9B8521D487F4600B69BB9 /* Service */,
+				27265A1C1D47452300A50A33 /* CoreData */,
 				27D5B1071D45F225008ACED3 /* Splash */,
 				27D5B0FB1D45E1B1008ACED3 /* Main */,
 				27D5B0F61D45D6E8008ACED3 /* Login */,
@@ -176,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				27D5B0E61D45D651008ACED3 /* Main.storyboard */,
-				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
+				278750551D49ED2D000A5A15 /* Timeline */,
 				27D5B0FC1D45E1FA008ACED3 /* MentionMe.storyboard */,
 				27D5B1001D45E448008ACED3 /* Me.storyboard */,
 				27D5B0FE1D45E3CD008ACED3 /* Message.storyboard */,
@@ -272,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D5B0F51D45D6A3008ACED3 /* Login.storyboard in Resources */,
+				2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */,
 				27D5B0FA1D45D91B008ACED3 /* Timeline.storyboard in Resources */,
 				27D5B0FD1D45E1FA008ACED3 /* MentionMe.storyboard in Resources */,
 				27D5B1031D45E7BE008ACED3 /* Splash.storyboard in Resources */,
@@ -343,15 +401,21 @@
 				27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */,
 				27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */,
 				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
+				27A9B84E1D487C1100B69BB9 /* Service.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
 				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
+				278750601D49F794000A5A15 /* Status.m in Sources */,
 				27D5B0DF1D45D651008ACED3 /* main.m in Sources */,
 				27265A281D47558400A50A33 /* User.m in Sources */,
 				27265A221D4748F400A50A33 /* Model.xcdatamodeld in Sources */,
 				27D5B1061D45F214008ACED3 /* SplashViewController.m in Sources */,
+				2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */,
 				27265A1B1D4743E600A50A33 /* AccountsTableViewController.m in Sources */,
+				27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */,
+				278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */,
 				27D5B10A1D45F9F4008ACED3 /* LoginViewController.m in Sources */,
+				274F40091D489EAA0055518E /* CoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

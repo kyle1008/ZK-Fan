@@ -18,6 +18,8 @@
 
 +(instancetype)sharedCoreDataStack
 {
+    NSLog(@"%s",__func__);
+
     static CoreDataStack *coreDataStack = nil;//默认值为nil，可不写
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -26,17 +28,11 @@
     return coreDataStack;
 }
 
--(void)saveContext
-{
-    NSError *error;
-    if(![_context save:&error]){
-        NSLog(@"%@",error.description);
-    }
-    
-}
 
 //复写取值方法
 -(NSManagedObjectModel *)model{
+    NSLog(@"%s",__func__);
+
     if (_model) {
         return  _model;
     }
@@ -50,12 +46,16 @@
 //创建sqlite数据库
 //1.
 -(NSURL *)documentURL{
+    NSLog(@"%s",__func__);
+
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *urls = [fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     return urls[0];
 }
 
 -(NSPersistentStoreCoordinator *)coordinator{
+    NSLog(@"%s",__func__);
+
     if(_coordinator){
         return _coordinator;
     }
@@ -66,6 +66,7 @@
     
     NSError *error;
    NSPersistentStore *store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:&error];
+    
     if (!store) {
         NSLog(@"%@",error.description);
     }
@@ -73,13 +74,29 @@
     return _coordinator;
 }
 
--(NSManagedObjectContext *)context{
+
+-(NSManagedObjectContext *)context {
+    NSLog(@"%s",__func__);
+
     if (_context) {
         return _context;
     }
-    
     _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    
+    _context.persistentStoreCoordinator = self.coordinator;
     return _context;
+}
+
+
+-(void)saveContext
+{
+    NSLog(@"%s",__func__);
+
+    NSError *error;
+    if(![_context save:&error]){
+        NSLog(@"%@",error.description);
+    }
+    
 }
 
 @end

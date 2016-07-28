@@ -7,7 +7,12 @@
 //
 
 #import "CoreDataStack.h"
-
+#import "User.h"
 @interface CoreDataStack (User)
+//-(void)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret;
 -(void)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret;
+
+//多用户切换时使用
+@property (nonatomic, strong) User *currentUser;
+
 @end

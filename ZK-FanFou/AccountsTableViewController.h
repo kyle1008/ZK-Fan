@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface AccountsTableViewController : UIViewController
+#import "CoreDataTableViewController.h"
+
+@interface AccountsTableViewController : CoreDataTableViewController
 
 @end
