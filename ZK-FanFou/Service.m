@@ -1,10 +1,11 @@
-//
+//授权访问和接收网络数据
 //  Service.m
 //  ZK-FanFou
 //
 //  Created by Kyle.Z on 16/7/27.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
+
 #import "Service.h"
 #import <TDOAuth/TDOAuth.h>
 #import "APIContant.h"
@@ -57,8 +58,10 @@
                                         consumerSecret:CONSUMER_SECRET
                                            accessToken:nil
                                            tokenSecret:nil];
+    
     NSURLSessionDataTask *task = [_session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
         NSLog(@"oauth = %@",str);
         //str
         //oauth_token=8ldIZyxQeVrFZXFOZH5tAwj6vzJYuLQpl0WUEYtWc&oauth_token_secret=x6qpRnlEmW9JbQn4PQVVeVG8ZLPEx6A0TOebgwcuA
@@ -70,11 +73,14 @@
        NSArray *sp2 = [ele1 componentsSeparatedByString:@"&"];
        NSString *token = sp2[0];
         NSLog(@"token = %@",sp2[0]);
+        
+        //success:^(NSString *token, NSString *tokenSecret){}
         sucess(token, tokenSecret);
     }];
     
     [task resume];
 }
+
 
 -(void)requestVerifyCredential:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSDictionary *result)) sucess {
     NSLog(@"%s",__func__);
@@ -94,7 +100,7 @@
     [task resume];
 }
 
--(void)requestWithPath:(NSString *)path parameters:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSDictionary *result)) sucess failure:(void (^)(NSError *error)) failure {
+-(void)requestWithPath:(NSString *)path parameters:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
     NSLog(@"%s",__func__);
     
     NSURLRequest *request = [TDOAuth URLRequestForPath:path parameters:parameters host:FANFOU_API_HOST consumerKey:CONSUMER_KEY consumerSecret:CONSUMER_SECRET accessToken:accessToken tokenSecret:tokenSecret scheme:@"http" requestMethod:requestMethod dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1];
@@ -104,15 +110,15 @@
             failure(error);
         } else {
             
-            NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-            
+            NSArray *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            NSLog(@"%@",result);
             sucess(result);
         }
     }];
     [task resume];
 }
 
--(void)requestStatusWithSucess:(void (^)(NSDictionary *result)) sucess failure:(void (^)(NSError *error)) failure {
+-(void)requestStatusWithSucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
     
     User *user = [CoreDataStack sharedCoreDataStack].currentUser;
 

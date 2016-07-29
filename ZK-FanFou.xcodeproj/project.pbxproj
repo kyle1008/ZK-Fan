@@ -20,6 +20,8 @@
 		2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TableViewCell.xib */; };
 		2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */; };
 		278750601D49F794000A5A15 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505E1D49F794000A5A15 /* Status.m */; };
+		278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */; };
+		278750F81D4B321D000A5A15 /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F71D4B321D000A5A15 /* TimelineTableViewController.m */; };
 		27A9B84E1D487C1100B69BB9 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B84D1D487C1100B69BB9 /* Service.m */; };
 		27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B8501D487DDC00B69BB9 /* APIContant.m */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
@@ -63,6 +65,10 @@
 		2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Status+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2787505D1D49F794000A5A15 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		2787505E1D49F794000A5A15 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		278750F31D4B20E9000A5A15 /* CoreDataStack+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+Status.h"; sourceTree = "<group>"; };
+		278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Status.m"; sourceTree = "<group>"; };
+		278750F61D4B321D000A5A15 /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewController.h; sourceTree = "<group>"; };
+		278750F71D4B321D000A5A15 /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
 		27A9B84C1D487C1100B69BB9 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		27A9B84D1D487C1100B69BB9 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		27A9B84F1D487DDC00B69BB9 /* APIContant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIContant.h; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 				27265A1E1D47455500A50A33 /* CoreDataStack.m */,
 				27265A2A1D47560000A50A33 /* CoreDataStack+User.h */,
 				27265A2B1D47560000A50A33 /* CoreDataStack+User.m */,
+				278750F31D4B20E9000A5A15 /* CoreDataStack+Status.h */,
+				278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */,
 				274F400A1D489EBD0055518E /* Generic TVControllers */,
 			);
 			name = CoreData;
@@ -122,11 +130,11 @@
 		27265A291D47559100A50A33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
 				2787505B1D49F794000A5A15 /* Status+CoreDataProperties.h */,
 				2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */,
 				2787505D1D49F794000A5A15 /* Status.h */,
 				2787505E1D49F794000A5A15 /* Status.m */,
-				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
 				27265A231D47558400A50A33 /* User+CoreDataProperties.h */,
 				27265A241D47558400A50A33 /* User+CoreDataProperties.m */,
 				27265A251D47558400A50A33 /* User.h */,
@@ -148,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
+				278750F61D4B321D000A5A15 /* TimelineTableViewController.h */,
+				278750F71D4B321D000A5A15 /* TimelineTableViewController.m */,
 				278750561D49EDE1000A5A15 /* TableViewCell.h */,
 				278750571D49EDE1000A5A15 /* TableViewCell.m */,
 				278750581D49EDE1000A5A15 /* TableViewCell.xib */,
@@ -403,6 +413,7 @@
 				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
 				27A9B84E1D487C1100B69BB9 /* Service.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,
+				278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */,
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
 				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
 				278750601D49F794000A5A15 /* Status.m in Sources */,
@@ -411,6 +422,7 @@
 				27265A221D4748F400A50A33 /* Model.xcdatamodeld in Sources */,
 				27D5B1061D45F214008ACED3 /* SplashViewController.m in Sources */,
 				2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */,
+				278750F81D4B321D000A5A15 /* TimelineTableViewController.m in Sources */,
 				27265A1B1D4743E600A50A33 /* AccountsTableViewController.m in Sources */,
 				27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */,
 				278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */,

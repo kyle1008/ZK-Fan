@@ -14,5 +14,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 
 -(void)configureWithUser:(User *)user;
-
 @end

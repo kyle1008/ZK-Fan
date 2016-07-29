@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  ZK-FanFou
 //
-//  Created by Kyle.Z on 16/7/28.
+//  Created by Kyle.Z on 16/7/29.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,11 +14,11 @@
 @implementation User (CoreDataProperties)
 
 @dynamic iconURL;
+@dynamic isActive;
 @dynamic name;
 @dynamic token;
 @dynamic tokenSecret;
 @dynamic uId;
-@dynamic isActive;
 @dynamic statuses;
 
 @end

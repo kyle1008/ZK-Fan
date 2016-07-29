@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Status.h"
 @interface TableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *publishLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentsLabel;
 
+-(void)configureWithUser:(Status *)status;
 @end

@@ -11,6 +11,7 @@
 
 NSString *const USER_ENTITY = @"User";
 @implementation CoreDataStack (User)
+@dynamic currentUser;
 
 -(User *)checkImportedWithUserID:(NSString *)uid {
     NSLog(@"%s",__func__);
@@ -24,11 +25,10 @@ NSString *const USER_ENTITY = @"User";
     if (users.count > 0) {
         return users[0];
     }
-    
     return nil;
 }
 
--(void)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret {
+-(User *)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret {
     NSLog(@"%s",__func__);
     
     User *user =  [self checkImportedWithUserID:userProfile[@"id"]];
@@ -40,6 +40,8 @@ NSString *const USER_ENTITY = @"User";
     user.iconURL = userProfile[@"profile_image_url"];
     user.token = token;
     user.tokenSecret = tokenSecret;
+    
+    return user;
 }
 
 //currentUser取值方法
@@ -47,9 +49,11 @@ NSString *const USER_ENTITY = @"User";
     NSLog(@"%s",__func__);
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:USER_ENTITY];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isActive = %@",@YES];
-    fr.predicate = predicate;
     
+    //@YES支持多用户
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isActive = %@",@YES];
+//    fr.predicate = predicate;
+//    
     NSError *error;
     NSArray *users = [self.context executeFetchRequest:fr error:&error];
     if (users.count > 0) {

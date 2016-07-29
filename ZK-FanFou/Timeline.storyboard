@@ -5,19 +5,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timeline Table View Controller-->
         <scene sceneID="Kjv-uY-8ar">
             <objects>
-                <viewController id="yM9-SW-SLS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g6c-4t-1Uk"/>
-                        <viewControllerLayoutGuide type="bottom" id="DdF-d6-Do7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZtL-2N-sXz">
+                <viewController id="yM9-SW-SLS" customClass="TimelineTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HBc-07-DXy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <connections>
+                            <outlet property="dataSource" destination="yM9-SW-SLS" id="Dg1-s7-fXB"/>
+                            <outlet property="delegate" destination="yM9-SW-SLS" id="yWr-mN-W7o"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="YmQ-qP-qA4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFf-rQ-wCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
