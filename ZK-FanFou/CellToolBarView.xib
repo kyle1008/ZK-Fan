@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CellToolBarView">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-Bo-1af">
+                    <rect key="frame" x="0.0" y="0.0" width="143" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hs-rB-vQc">
+                    <rect key="frame" x="143" y="0.0" width="142" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="回复">
+                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-U0-7Ow">
+                    <rect key="frame" x="285" y="0.0" width="143" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="收藏">
+                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ds1-U0-7Ow" firstAttribute="leading" secondItem="0Hs-rB-vQc" secondAttribute="trailing" id="4TH-7K-1SZ"/>
+                <constraint firstItem="0Hs-rB-vQc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5KX-Wk-jZv"/>
+                <constraint firstItem="bRN-Bo-1af" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5TB-ey-g48"/>
+                <constraint firstAttribute="trailing" secondItem="ds1-U0-7Ow" secondAttribute="trailing" id="ALg-oY-c5E"/>
+                <constraint firstItem="0Hs-rB-vQc" firstAttribute="leading" secondItem="bRN-Bo-1af" secondAttribute="trailing" id="Ayt-8y-q0B"/>
+                <constraint firstAttribute="bottom" secondItem="bRN-Bo-1af" secondAttribute="bottom" id="FNe-Io-EvY"/>
+                <constraint firstItem="ds1-U0-7Ow" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O7M-iJ-bek"/>
+                <constraint firstItem="0Hs-rB-vQc" firstAttribute="height" secondItem="bRN-Bo-1af" secondAttribute="height" id="QIJ-O7-bgN"/>
+                <constraint firstItem="0Hs-rB-vQc" firstAttribute="width" secondItem="bRN-Bo-1af" secondAttribute="width" id="XZF-72-igt"/>
+                <constraint firstAttribute="trailing" secondItem="ds1-U0-7Ow" secondAttribute="trailing" id="dDf-j4-jF4"/>
+                <constraint firstItem="bRN-Bo-1af" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gTr-UU-eZp"/>
+                <constraint firstItem="ds1-U0-7Ow" firstAttribute="width" secondItem="bRN-Bo-1af" secondAttribute="width" id="lM6-Vc-g0A"/>
+                <constraint firstItem="bRN-Bo-1af" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nRX-s7-QeV"/>
+                <constraint firstAttribute="bottom" secondItem="0Hs-rB-vQc" secondAttribute="bottom" id="rdg-NX-KS8"/>
+                <constraint firstAttribute="bottom" secondItem="ds1-U0-7Ow" secondAttribute="bottom" id="syt-Hk-yO4"/>
+                <constraint firstItem="ds1-U0-7Ow" firstAttribute="height" secondItem="bRN-Bo-1af" secondAttribute="height" id="tMW-Zk-rcN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="264" y="119.5"/>
+        </view>
+    </objects>
+</document>

@@ -10,4 +10,5 @@ pod 'TDOAuth'
 pod 'AFNetworking', '~> 3.0'
 pod 'SDWebImage'
 pod 'JTSImageViewController'
+pod 'DTCoreText'
 end

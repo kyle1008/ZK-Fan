@@ -7,17 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@class Status;
+@class DTAttributedLabel;
 @class TableViewCell;
 typedef void (^DidSelectPhotoBlock) (TableViewCell *cell);
 
-@class Status;
 @interface TableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *photoImageHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *publishLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentsLabel;
+@property (weak, nonatomic) IBOutlet DTAttributedLabel *contentsLabel;
 
 @property (strong, nonatomic) DidSelectPhotoBlock didSelectPhotoBlock;
 

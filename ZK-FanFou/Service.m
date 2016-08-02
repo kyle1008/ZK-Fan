@@ -120,7 +120,8 @@
     
     User *user = [CoreDataStack sharedCoreDataStack].currentUser;
 
-    [self requestWithPath:API_HOME_TIMELINE parameters:nil accessToken:user.token tokenSecret:user.tokenSecret requestMethod:@"GET" sucess:sucess failure:failure];
+    [self requestWithPath:API_HOME_TIMELINE parameters:@{@"mode": @"like",@"count": @60,@"format": @"html"}
+              accessToken:user.token tokenSecret:user.tokenSecret requestMethod:@"GET" sucess:sucess failure:failure];
 }
 
 @end

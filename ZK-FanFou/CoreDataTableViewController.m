@@ -20,7 +20,6 @@
         if (![self.frc performFetch:&error]) {
             NSLog(@"%@", error.description);
         }
-        
         [self.tableView reloadData];
     }
 }
@@ -36,15 +35,16 @@
 
     return [[[self.frc sections] objectAtIndex:section] numberOfObjects];
 }
+
 #pragma mark - NSFetchedResults Controller Delegate
 -(void) controllerWillChangeContent:(NSFetchedResultsController *)controller{
-
+    [self.tableView beginUpdates];
+}
+-(void) controllerDidChangeContent:(NSFetchedResultsController *)controller{
     [self.tableView endUpdates];
 }
 
 -(void) controller:(NSFetchedResultsController *)controller didChangeSection:(nonnull id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type{
-    NSLog(@"%s", __func__);
-
     switch (type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -69,7 +69,7 @@
             break;
          //删除
         case NSFetchedResultsChangeDelete :
-            [tableView deleteRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
             break;
         //更新
         case NSFetchedResultsChangeUpdate :

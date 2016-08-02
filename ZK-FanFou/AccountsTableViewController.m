@@ -19,9 +19,8 @@
     [self performFetch];
     
 }
-
+#pragma mark - configureFetch
 -(void)configureFetch {
-    
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"User"];
     
@@ -32,16 +31,20 @@
     self.frc.delegate = self;
 }
 
-
+#pragma mark - cellForRowAtIndexPath
 -(UITableViewCell *)tableView:(UITableView *)tableView
 cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell"];
     User *user = [self.frc objectAtIndexPath:indexPath];
 //    cell.nameLabel.text = user.name;
 //    cell.idLabel.text = user.uId;
     [cell configureWithUser:user];
-    
     return cell;
+}
+
+#pragma mark - didSelectRowAtIndexPath <tabview delegate method>
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    User *user = [self.frc objectAtIndexPath:indexPath];
+    user.isActive = @YES;
 }
 @end

@@ -13,11 +13,11 @@ NSString *const USER_ENTITY = @"User";
 @implementation CoreDataStack (User)
 @dynamic currentUser;
 
--(User *)checkImportedWithUserID:(NSString *)uid {
+-(User *)checkImportedWithUserID:(NSString *)uId {
     
 
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:USER_ENTITY];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uId like %@",uid];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uId like %@",uId];
     fr.predicate = predicate;
     
     NSError *error;
@@ -40,31 +40,33 @@ NSString *const USER_ENTITY = @"User";
     user.iconURL = userProfile[@"profile_image_url"];
     user.token = token;
     user.tokenSecret = tokenSecret;
-    
+
     return user;
 }
-
-//currentUser取值方法
--(User *)currentUser {
-    
-    
+//根据用户ID查找用户数据
+-(User *)findUniqueEntityWithUniqueID:(NSString *)key value:(id)value {
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:USER_ENTITY];
-    
-    //@YES支持多用户
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isActive = %@",@YES];
-//    fr.predicate = predicate;
-//    
+    //设置isActive = @YES,支持多用户
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@",key, value];
+    fr.predicate = predicate;
     NSError *error;
     NSArray *users = [self.context executeFetchRequest:fr error:&error];
     if (users.count > 0) {
         return users[0];
     }
-    
     return nil;
 }
 
-
-
-
+//currentUser取值方法
+-(User *)currentUser {
+    //NSString *str = [NSString stringWithFormat:@"%@", @YES];
+    User *user = [self findUniqueEntityWithUniqueID:@"isActive" value:@YES];
+    return user;
+}
+//
+-(User *)findUserWithId:(NSString *)uId {
+    User *user = [self findUniqueEntityWithUniqueID:@"uId" value:uId];
+    return user;
+}
 
 @end

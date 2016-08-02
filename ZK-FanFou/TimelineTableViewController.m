@@ -19,16 +19,18 @@
 @end
 
 @implementation TimelineTableViewController
+-(void)creatRefreshController {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+    [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    //加载xib
-    UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"TVcell"];
-    self.tableView.estimatedRowHeight = 100;
-    //动态改变Cell高度[自适应高度]
-    //self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
+-(void)refreshData {
+    [self requestData];
+    [self.refreshControl endRefreshing];
+}
+
+-(void)requestData {
     [[Service sharedInstance] requestStatusWithSucess:^(NSArray *result) {
         [[CoreDataStack sharedCoreDataStack] insertStatusWithArrayProfile:result];
         //主线程加载
@@ -36,13 +38,34 @@
             [self configureFetch];
             [self performFetch];
         });
-
     } failure:^(NSError *error) {
-        
-    }];
     
+    }];
+}
 
-    // Do any additional setup after loading the view.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //调用下拉刷新功能
+    [self creatRefreshController];
+    
+    //加载xib
+    UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"TVcell"];
+    self.tableView.estimatedRowHeight = 100;
+    //动态改变Cell高度[自适应高度]
+    //self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self requestData];
+//    [[Service sharedInstance] requestStatusWithSucess:^(NSArray *result) {
+//        [[CoreDataStack sharedCoreDataStack] insertStatusWithArrayProfile:result];
+//        //主线程加载
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self configureFetch];
+//            [self performFetch];
+//        });
+//
+//    } failure:^(NSError *error) {
+//        
+//    }];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -61,7 +84,7 @@
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"Status"];
     
-    NSArray *descriptors = @[[[NSSortDescriptor alloc] initWithKey:@"created_at" ascending:YES]];
+    NSArray *descriptors = @[[[NSSortDescriptor alloc] initWithKey:@"created_at" ascending:NO]];//ascending:NO 发布时间倒序排列
     fr.sortDescriptors = descriptors;
     self.frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fr managedObjectContext:[CoreDataStack sharedCoreDataStack].context  sectionNameKeyPath:nil cacheName:nil];
     self.frc.delegate = self;

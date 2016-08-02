@@ -25,6 +25,8 @@
 		278750601D49F794000A5A15 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505E1D49F794000A5A15 /* Status.m */; };
 		278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */; };
 		278750F81D4B321D000A5A15 /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F71D4B321D000A5A15 /* TimelineTableViewController.m */; };
+		278C42C81D508E1E00A11C2F /* CellToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 278C42C71D508E1E00A11C2F /* CellToolBarView.m */; };
+		278C42CA1D508E4900A11C2F /* CellToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278C42C91D508E4900A11C2F /* CellToolBarView.xib */; };
 		27A9B84E1D487C1100B69BB9 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B84D1D487C1100B69BB9 /* Service.m */; };
 		27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B8501D487DDC00B69BB9 /* APIContant.m */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
@@ -78,6 +80,9 @@
 		278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Status.m"; sourceTree = "<group>"; };
 		278750F61D4B321D000A5A15 /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewController.h; sourceTree = "<group>"; };
 		278750F71D4B321D000A5A15 /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
+		278C42C61D508E1E00A11C2F /* CellToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellToolBarView.h; sourceTree = "<group>"; };
+		278C42C71D508E1E00A11C2F /* CellToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellToolBarView.m; sourceTree = "<group>"; };
+		278C42C91D508E4900A11C2F /* CellToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellToolBarView.xib; sourceTree = "<group>"; };
 		27A9B84C1D487C1100B69BB9 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		27A9B84D1D487C1100B69BB9 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		27A9B84F1D487DDC00B69BB9 /* APIContant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIContant.h; sourceTree = "<group>"; };
@@ -207,8 +212,19 @@
 				278750F71D4B321D000A5A15 /* TimelineTableViewController.m */,
 				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
 				2755DB0F1D4F13D5007DB408 /* Cell */,
+				278C42C51D508DF200A11C2F /* View */,
 			);
 			name = Timeline;
+			sourceTree = "<group>";
+		};
+		278C42C51D508DF200A11C2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				278C42C61D508E1E00A11C2F /* CellToolBarView.h */,
+				278C42C71D508E1E00A11C2F /* CellToolBarView.m */,
+				278C42C91D508E4900A11C2F /* CellToolBarView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		27A9B8521D487F4600B69BB9 /* Service */ = {
@@ -391,6 +407,7 @@
 				27D5B1031D45E7BE008ACED3 /* Splash.storyboard in Resources */,
 				27D5B0F81D45D840008ACED3 /* Accounts.storyboard in Resources */,
 				27D5B0ED1D45D651008ACED3 /* LaunchScreen.storyboard in Resources */,
+				278C42CA1D508E4900A11C2F /* CellToolBarView.xib in Resources */,
 				27D5B1011D45E448008ACED3 /* Me.storyboard in Resources */,
 				27D5B0EA1D45D651008ACED3 /* Assets.xcassets in Resources */,
 				27D5B0FF1D45E3CD008ACED3 /* Message.storyboard in Resources */,
@@ -464,6 +481,7 @@
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
 				2755DB161D4F1999007DB408 /* Photo.m in Sources */,
 				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
+				278C42C81D508E1E00A11C2F /* CellToolBarView.m in Sources */,
 				278750601D49F794000A5A15 /* Status.m in Sources */,
 				27D5B0DF1D45D651008ACED3 /* main.m in Sources */,
 				27265A281D47558400A50A33 /* User.m in Sources */,

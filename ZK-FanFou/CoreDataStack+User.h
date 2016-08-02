@@ -14,6 +14,7 @@
 
 -(User *)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret;
 
+-(User *)findUserWithId:(NSString *)uId;
 //多用户切换时使用
 @property (nonatomic, strong) User *currentUser;
 
