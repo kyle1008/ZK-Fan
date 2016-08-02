@@ -2,7 +2,7 @@
 //  Status+CoreDataProperties.m
 //  ZK-FanFou
 //
-//  Created by Kyle.Z on 16/7/29.
+//  Created by Kyle.Z on 16/8/1.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,9 +14,10 @@
 @implementation Status (CoreDataProperties)
 
 @dynamic created_at;
+@dynamic sid;
 @dynamic source;
 @dynamic text;
-@dynamic sid;
 @dynamic user;
+@dynamic photo;
 
 @end

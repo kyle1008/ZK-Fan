@@ -14,7 +14,7 @@ NSString *const USER_ENTITY = @"User";
 @dynamic currentUser;
 
 -(User *)checkImportedWithUserID:(NSString *)uid {
-    NSLog(@"%s",__func__);
+    
 
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:USER_ENTITY];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uId like %@",uid];
@@ -29,7 +29,7 @@ NSString *const USER_ENTITY = @"User";
 }
 
 -(User *)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret {
-    NSLog(@"%s",__func__);
+    
     
     User *user =  [self checkImportedWithUserID:userProfile[@"id"]];
     if (!user) {
@@ -46,7 +46,7 @@ NSString *const USER_ENTITY = @"User";
 
 //currentUser取值方法
 -(User *)currentUser {
-    NSLog(@"%s",__func__);
+    
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:USER_ENTITY];
     

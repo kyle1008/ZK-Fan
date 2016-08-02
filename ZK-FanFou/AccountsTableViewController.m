@@ -17,11 +17,11 @@
     [super viewDidLoad];
     [self configureFetch];
     [self performFetch];
-    NSLog(@"%s",__func__);
+    
 }
 
 -(void)configureFetch {
-    NSLog(@"%s",__func__);
+    
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"User"];
     
@@ -35,7 +35,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
 cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%s",__func__);
+    
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell"];
     User *user = [self.frc objectAtIndexPath:indexPath];
 //    cell.nameLabel.text = user.name;

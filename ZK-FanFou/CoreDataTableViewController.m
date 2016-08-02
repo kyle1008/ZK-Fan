@@ -13,7 +13,7 @@
 
 @implementation CoreDataTableViewController
 -(void)performFetch {
-    NSLog(@"%s", __func__);
+
     
     if (self.frc) {
         NSError *error;
@@ -26,19 +26,18 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"%s", __func__);
+
 
     return [[self.frc sections] count];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%s", __func__);
+
 
     return [[[self.frc sections] objectAtIndex:section] numberOfObjects];
 }
 #pragma mark - NSFetchedResults Controller Delegate
 -(void) controllerWillChangeContent:(NSFetchedResultsController *)controller{
-    NSLog(@"%s", __func__);
 
     [self.tableView endUpdates];
 }

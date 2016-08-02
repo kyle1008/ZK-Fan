@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Status.h"
+@class TableViewCell;
+typedef void (^DidSelectPhotoBlock) (TableViewCell *cell);
+
+@class Status;
 @interface TableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *publishLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentsLabel;
+
+@property (strong, nonatomic) DidSelectPhotoBlock didSelectPhotoBlock;
 
 -(void)configureWithUser:(Status *)status;
 @end

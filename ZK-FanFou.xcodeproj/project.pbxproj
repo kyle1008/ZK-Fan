@@ -16,6 +16,9 @@
 		27265A281D47558400A50A33 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A261D47558400A50A33 /* User.m */; };
 		27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27265A2B1D47560000A50A33 /* CoreDataStack+User.m */; };
 		274F40091D489EAA0055518E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F40081D489EAA0055518E /* CoreDataTableViewController.m */; };
+		2755DB151D4F1999007DB408 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB121D4F1999007DB408 /* Photo+CoreDataProperties.m */; };
+		2755DB161D4F1999007DB408 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB141D4F1999007DB408 /* Photo.m */; };
+		2755DB1F1D4F2612007DB408 /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */; };
 		278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750571D49EDE1000A5A15 /* TableViewCell.m */; };
 		2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TableViewCell.xib */; };
 		2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */; };
@@ -58,6 +61,12 @@
 		27265A2B1D47560000A50A33 /* CoreDataStack+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+User.m"; sourceTree = "<group>"; };
 		274F40071D489EAA0055518E /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		274F40081D489EAA0055518E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		2755DB111D4F1999007DB408 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2755DB121D4F1999007DB408 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2755DB131D4F1999007DB408 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		2755DB141D4F1999007DB408 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		278750561D49EDE1000A5A15 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		278750571D49EDE1000A5A15 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		278750581D49EDE1000A5A15 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -130,7 +139,12 @@
 		27265A291D47559100A50A33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */,
 				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
+				2755DB111D4F1999007DB408 /* Photo+CoreDataProperties.h */,
+				2755DB121D4F1999007DB408 /* Photo+CoreDataProperties.m */,
+				2755DB131D4F1999007DB408 /* Photo.h */,
+				2755DB141D4F1999007DB408 /* Photo.m */,
 				2787505B1D49F794000A5A15 /* Status+CoreDataProperties.h */,
 				2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */,
 				2787505D1D49F794000A5A15 /* Status.h */,
@@ -152,15 +166,47 @@
 			name = "Generic TVControllers";
 			sourceTree = "<group>";
 		};
-		278750551D49ED2D000A5A15 /* Timeline */ = {
+		2755DB0F1D4F13D5007DB408 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
-				278750F61D4B321D000A5A15 /* TimelineTableViewController.h */,
-				278750F71D4B321D000A5A15 /* TimelineTableViewController.m */,
 				278750561D49EDE1000A5A15 /* TableViewCell.h */,
 				278750571D49EDE1000A5A15 /* TableViewCell.m */,
 				278750581D49EDE1000A5A15 /* TableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2755DB191D4F1E02007DB408 /* MentionMe */ = {
+			isa = PBXGroup;
+			children = (
+				27D5B0FC1D45E1FA008ACED3 /* MentionMe.storyboard */,
+			);
+			name = MentionMe;
+			sourceTree = "<group>";
+		};
+		2755DB1A1D4F1E13007DB408 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				27D5B1001D45E448008ACED3 /* Me.storyboard */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		2755DB1B1D4F1E1C007DB408 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				27D5B0FE1D45E3CD008ACED3 /* Message.storyboard */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		278750551D49ED2D000A5A15 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				278750F61D4B321D000A5A15 /* TimelineTableViewController.h */,
+				278750F71D4B321D000A5A15 /* TimelineTableViewController.m */,
+				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
+				2755DB0F1D4F13D5007DB408 /* Cell */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -243,10 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				27D5B0E61D45D651008ACED3 /* Main.storyboard */,
+				2755DB191D4F1E02007DB408 /* MentionMe */,
+				2755DB1A1D4F1E13007DB408 /* Me */,
+				2755DB1B1D4F1E1C007DB408 /* Message */,
 				278750551D49ED2D000A5A15 /* Timeline */,
-				27D5B0FC1D45E1FA008ACED3 /* MentionMe.storyboard */,
-				27D5B1001D45E448008ACED3 /* Me.storyboard */,
-				27D5B0FE1D45E3CD008ACED3 /* Message.storyboard */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -411,10 +457,12 @@
 				27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */,
 				27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */,
 				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
+				2755DB151D4F1999007DB408 /* Photo+CoreDataProperties.m in Sources */,
 				27A9B84E1D487C1100B69BB9 /* Service.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,
 				278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */,
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
+				2755DB161D4F1999007DB408 /* Photo.m in Sources */,
 				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
 				278750601D49F794000A5A15 /* Status.m in Sources */,
 				27D5B0DF1D45D651008ACED3 /* main.m in Sources */,
@@ -427,6 +475,7 @@
 				27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */,
 				278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */,
 				27D5B10A1D45F9F4008ACED3 /* LoginViewController.m in Sources */,
+				2755DB1F1D4F2612007DB408 /* MappingModel.xcmappingmodel in Sources */,
 				274F40091D489EAA0055518E /* CoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,9 +637,10 @@
 		27265A201D4748F400A50A33 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */,
 				27265A211D4748F400A50A33 /* Model.xcdatamodel */,
 			);
-			currentVersion = 27265A211D4748F400A50A33 /* Model.xcdatamodel */;
+			currentVersion = 2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

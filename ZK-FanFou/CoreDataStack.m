@@ -18,7 +18,7 @@
 
 +(instancetype)sharedCoreDataStack
 {
-    NSLog(@"%s",__func__);
+    
 
     static CoreDataStack *coreDataStack = nil;//默认值为nil，可不写
     static dispatch_once_t onceToken;
@@ -30,8 +30,8 @@
 
 
 //复写取值方法
+#pragma mark - model
 -(NSManagedObjectModel *)model{
-    NSLog(@"%s",__func__);
 
     if (_model) {
         return  _model;
@@ -46,15 +46,14 @@
 //创建sqlite数据库
 //1.
 -(NSURL *)documentURL{
-    NSLog(@"%s",__func__);
+    
 
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *urls = [fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     return urls[0];
 }
-
+#pragma mark - coordinator
 -(NSPersistentStoreCoordinator *)coordinator{
-    NSLog(@"%s",__func__);
 
     if(_coordinator){
         return _coordinator;
@@ -65,7 +64,10 @@
     NSURL *sqliteURL = [[self documentURL] URLByAppendingPathComponent:@"Model.sqlite"];
     
     NSError *error;
-   NSPersistentStore *store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:&error];
+    //数据库自动迁移，用MappingModel做数据迁移
+    NSDictionary *dic = @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@NO};
+    
+   NSPersistentStore *store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:dic error:&error];
     
     if (!store) {
         NSLog(@"%@",error.description);
@@ -74,9 +76,9 @@
     return _coordinator;
 }
 
-
+#pragma mark - context
 -(NSManagedObjectContext *)context {
-    NSLog(@"%s",__func__);
+    
 
     if (_context) {
         return _context;
@@ -87,10 +89,9 @@
     return _context;
 }
 
-
+#pragma mark - saveContext
 -(void)saveContext
 {
-    NSLog(@"%s",__func__);
 
     NSError *error;
     if(![_context save:&error]){

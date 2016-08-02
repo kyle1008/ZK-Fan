@@ -15,14 +15,13 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    NSLog(@"%s",__func__);
 
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
-    NSLog(@"%s",__func__);
+    
 
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

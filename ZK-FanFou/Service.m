@@ -18,7 +18,7 @@
 @implementation Service
 
 +(instancetype)sharedInstance {
-    NSLog(@"%s",__func__);
+    
     
     static Service *service;
     static dispatch_once_t onceToken;
@@ -30,7 +30,7 @@
 }
 
 -(instancetype)init {
-    NSLog(@"%s",__func__);
+    
     
     self = [super init];
     if (self) {
@@ -45,7 +45,7 @@
 //xAuth
 //获取到(access token) and (access secret)
 - (void)authoriseWithUserName:(NSString *)userName password:(NSString *)password success:(void (^)(NSString *token,NSString *tokenSecret))sucess  {
-    NSLog(@"%s",__func__);
+    
     
     NSURLRequest *request = [TDOAuth URLRequestForPath:API_ACCESS_TOKEN
                                          GETParameters:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -83,7 +83,6 @@
 
 
 -(void)requestVerifyCredential:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSDictionary *result)) sucess {
-    NSLog(@"%s",__func__);
     
    NSURLRequest *request = [TDOAuth URLRequestForPath:API_VERIFY_CREDENTIALS parameters:parameters host:FANFOU_API_HOST consumerKey:CONSUMER_KEY consumerSecret:CONSUMER_SECRET accessToken:accessToken tokenSecret:tokenSecret scheme:@"http" requestMethod:requestMethod dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1];
     
@@ -101,7 +100,6 @@
 }
 
 -(void)requestWithPath:(NSString *)path parameters:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
-    NSLog(@"%s",__func__);
     
     NSURLRequest *request = [TDOAuth URLRequestForPath:path parameters:parameters host:FANFOU_API_HOST consumerKey:CONSUMER_KEY consumerSecret:CONSUMER_SECRET accessToken:accessToken tokenSecret:tokenSecret scheme:@"http" requestMethod:requestMethod dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1];
     

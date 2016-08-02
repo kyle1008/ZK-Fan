@@ -9,16 +9,16 @@
 #import "CoreDataStack+Status.h"
 #import "Status.h"
 #import "CoreDataStack+User.h"
-
+#import "Photo.h"
 static NSString *const STATUS_ENTITY = @"Status";
-
+static NSString *const PHOTO_ENTITY = @"Photo";
 @implementation CoreDataStack (Status)
 
 -(Status *)checkImportedWithStatusID:(NSString *)sid {
-    NSLog(@"%s",__func__);
+    
     
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:STATUS_ENTITY];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"sid like %@",sid];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"sid = %@",sid];
     fr.predicate = predicate;
     
     NSError *error;
@@ -31,22 +31,34 @@ static NSString *const STATUS_ENTITY = @"Status";
 
 //插入方法
 -(Status *)insertOrUpdateWithStatusProfile:(NSDictionary *)statusProfile {
-    NSLog(@"%s",__func__);
     
-    Status *status =  [self checkImportedWithStatusID:statusProfile[@"id"]];
+    
+    Status *status =  [self checkImportedWithStatusID:statusProfile[@"sid"]];
+    
+    Photo *photo = status.photo;
     if (!status) {
         status = [NSEntityDescription insertNewObjectForEntityForName:STATUS_ENTITY inManagedObjectContext:self.context];
+        if (!photo) {
+            //插入用户发布的图片
+            photo = [NSEntityDescription insertNewObjectForEntityForName:PHOTO_ENTITY inManagedObjectContext:self.context];
+        }
     }
+    //更新用户发布的图片,photo表
+    NSDictionary *photoDic = statusProfile[@"photo"];
+    photo.imageurl = photoDic[@"imageurl"];
+    photo.largeurl = photoDic[@"largeurl"];
+    photo.thumburl = photoDic[@"thumburl"];
+    //建立status与photo的关系
+    status.photo = photo;
+    //更新status表
+    status.source = statusProfile[@"source"];
+    status.text = statusProfile[@"text"];
+    status.sid = statusProfile[@"id"];
     
     NSString *dateStr = statusProfile[@"created_at"];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"E MM dd HH:mm:ssZZZZZ yyyy";
     status.created_at = [dateFormatter dateFromString:dateStr];
-    
-    status.source = statusProfile[@"source"];
-    status.text = statusProfile[@"text"];
-    status.sid = statusProfile[@"id"];
-
     
     return status;
 

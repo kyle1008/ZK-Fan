@@ -14,7 +14,6 @@
 
 -(void)configureWithUser:(User *)user
 {
-    NSLog(@"%s", __func__);
     
     self.nameLabel.text = user.name;
     self.idLabel.text = user.uId;
@@ -27,14 +26,13 @@
 
 
 - (void)awakeFromNib {
-    NSLog(@"%s",__func__);
 
     [super awakeFromNib];
     // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    NSLog(@"%s",__func__);
+    
     
     [super setSelected:selected animated:animated];
 
