@@ -16,8 +16,7 @@
 
 @implementation CoreDataStack
 
-+(instancetype)sharedCoreDataStack
-{
++(instancetype)sharedCoreDataStack{
     
 
     static CoreDataStack *coreDataStack = nil;//默认值为nil，可不写
@@ -90,8 +89,7 @@
 }
 
 #pragma mark - saveContext
--(void)saveContext
-{
+-(void)saveContext{
 
     NSError *error;
     if(![_context save:&error]){

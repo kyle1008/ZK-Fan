@@ -19,49 +19,12 @@
 @end
 
 @implementation ComposeViewController
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
-//}
-//
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-//
-//- (IBAction)close:(UIButton *)sender {
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//}
-//- (IBAction)takePhoto:(UIBarButtonItem *)sender {
-//    // 创建pickerController
-//    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-//    // set delegate
-//    picker.delegate = self;
-//    // present
-//    [self presentViewController:picker animated:YES completion:nil];
-//}
-//#pragma mark - Picker Delegate
-//-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary<NSString *,id> *)info{
-//    self.pickerImageView.image = info[UIImagePickerControllerOriginalImage];
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
-//- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-//{
-//    // 取消后退出当前controller
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
-//- (IBAction)postContent:(UIBarButtonItem *)sender {
-//    NSData *data = UIImageJPEGRepresentation(_pickerImageView.image, 0.5);
-//    [[Service sharedInstance] postData:@"Test photo" imageData:data replayToStatusID:nil repostStatusID:nil sucess:^(NSArray *result) {
-//        NSLog(@"%@",result);
-//    } failure:^(NSError *error) {
-//        NSLog(@"%@",error.description);
-//    }];
-//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 - (IBAction)close:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -77,7 +40,7 @@
 
 - (IBAction)postContent:(id)sender {
     NSData *data = UIImageJPEGRepresentation(_pickerImageView.image, 0.5);
-    [[Service sharedInstance] postData:@"QWERTY" imageData:data replayToStatusID:nil repostStatusID:nil sucess:^(NSArray *result) {
+    [[Service sharedInstance] postData:@"QWERTYYY" imageData:data replayToStatusID:nil repostStatusID:nil sucess:^(NSArray *result) {
         NSLog(@"%@",result);
     } failure:^(NSError *error) {
         NSLog(@"%@",error.description);
@@ -86,16 +49,16 @@
 
 #pragma mark - picker 代理
 // 照片选择完成后调用这个方法
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
-{
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     self.pickerImageView.image = info[UIImagePickerControllerOriginalImage];
     // 选中后取消当前controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     // 取消后退出当前controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 @end

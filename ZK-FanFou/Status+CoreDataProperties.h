@@ -2,7 +2,7 @@
 //  Status+CoreDataProperties.h
 //  ZK-FanFou
 //
-//  Created by Kyle.Z on 16/8/1.
+//  Created by Kyle.Z on 16/8/4.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -10,7 +10,6 @@
 //
 
 #import "Status.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,8 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *sid;
 @property (nullable, nonatomic, retain) NSString *source;
 @property (nullable, nonatomic, retain) NSString *text;
-@property (nullable, nonatomic, retain) User *user;
+@property (nullable, nonatomic, retain) NSNumber *favorited;
 @property (nullable, nonatomic, retain) Photo *photo;
+@property (nullable, nonatomic, retain) User *user;
 
 @end
 

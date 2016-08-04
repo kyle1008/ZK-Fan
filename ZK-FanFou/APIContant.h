@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+//饭否API
+//https://github.com/FanfouAPI/FanFouAPIDoc/wiki/Apicategory
 
 FOUNDATION_EXPORT NSString *const API_ACCESS_TOKEN;
 FOUNDATION_EXPORT NSString *const CONSUMER_KEY;
@@ -17,3 +19,6 @@ FOUNDATION_EXTERN NSString *const API_VERIFY_CREDENTIALS;
 FOUNDATION_EXTERN NSString *const API_HOME_TIMELINE;
 FOUNDATION_EXTERN NSString *const API_UPDATE_TEXT;
 FOUNDATION_EXTERN NSString *const API_UPLOAD_PHOTO;
+//FOUNDATION_EXTERN or extern
+//FOUNDATION_EXTERN NSString *const API_FAVORITES_CREATE;
+extern NSString *const API_FAVORITES_CREATE;

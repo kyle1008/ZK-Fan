@@ -7,15 +7,26 @@
 //
 
 #import "CellToolBarView.h"
+@interface CellToolBarView()
+
+
+@end
 
 @implementation CellToolBarView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (IBAction)repost:(id)sender forEvent:(UIEvent *)event {
 }
-*/
-
+- (IBAction)reply:(id)sender forEvent:(UIEvent *)event {
+}
+- (IBAction)star:(id)sender forEvent:(UIEvent *)event {
+    [_delegate starWithCellToolBarView:self sender:sender forEvent:event];
+}
+-(void)setupStarbtnWithBool:(Boolean)fav {
+    NSString *starbtnTitle;
+    if (fav) {
+        [_starbtn setTitle:@"已收藏" forState:UIControlStateNormal];
+    }else{
+        [_starbtn setTitle:@"收藏" forState:UIControlStateNormal];
+    }
+}
 @end

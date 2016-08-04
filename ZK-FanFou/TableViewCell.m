@@ -12,9 +12,9 @@
 #import <UIImageView+WebCache.h>
 #import "Photo.h"
 #import <DTCoreText/DTCoreText.h>
+#import "CellToolBarView.h"
 
 @implementation TableViewCell
-
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -29,8 +29,8 @@
 }
 //        cell.nameLabel.text = status.user.name;
 
--(void)configureWithUser:(Status *)status
-{
+
+-(void)configureWithStatus:(Status *)status{
     //contentsLabel
     NSData *data = [status.text dataUsingEncoding:NSUnicodeStringEncoding];
     NSDictionary *opts = @{DTDefaultFontName:@"HelveticaNeue-Light", DTDefaultFontSize:@16, DTDefaultLinkColor:[UIColor blueColor]};
@@ -69,11 +69,38 @@
     //发布的内容
     //self.contentsLabel.text = status.text;
     
+    _cellToolbar = [self creatCellToolbar];
+    //自动布局关闭
+    _cellToolbar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.toolbar addSubview:_cellToolbar];
+    //添加约束
+    NSLayoutConstraint *top = [_cellToolbar.topAnchor constraintEqualToAnchor:self.toolbar.topAnchor];
+    NSLayoutConstraint *bottom = [_cellToolbar.bottomAnchor constraintEqualToAnchor:self.toolbar.bottomAnchor];
+    NSLayoutConstraint *left = [_cellToolbar.leftAnchor constraintEqualToAnchor:self.toolbar.leftAnchor];
+    NSLayoutConstraint *right = [_cellToolbar.rightAnchor constraintEqualToAnchor:self.toolbar.rightAnchor];
+    //激活约束
+    top.active = YES;
+    bottom.active = YES;
+    left.active = YES;
+    right.active = YES;
 }
 
 
 - (IBAction)showLargePhoto:(UIButton *)sender {
     _didSelectPhotoBlock(self);
 }
+
+-(CellToolBarView *)creatCellToolbar {
+    //取到CellToolBarView.xib中所有的view
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CellToolBarView" owner:nil options:nil];
+    CellToolBarView *cellToolbar = views[0];
+    return cellToolbar;
+}
+
+-(void)setToolbarDelegate:(CellToolBarView *)toolebar{
+    
+}
+
+
 
 @end

@@ -6,6 +6,12 @@
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 
+#ifdef DEBUG
+#define NSLog(FORMAT,...) fprintf(stderr,"\n %s:%d   %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__, [[[NSString alloc] initWithData:[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] dataUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding] UTF8String]);
+#else
+#define 
+#endif
+
 #import "TimelineTableViewController.h"
 #import "CoreDataStack+Status.h"
 #import "TableViewCell.h"
@@ -14,7 +20,8 @@
 #import "Service.h"
 #import <JTSImageViewController/JTSImageViewController.h>
 #import <SDImageCache.h>
-@interface TimelineTableViewController () <JTSImageViewControllerInteractionsDelegate>
+#import "CellToolBarView.h"
+@interface TimelineTableViewController () <JTSImageViewControllerInteractionsDelegate,CellToolBarDelegate>
 
 @end
 
@@ -56,24 +63,12 @@
     //动态改变Cell高度[自适应高度]
     //self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self requestData];
-//    [[Service sharedInstance] requestStatusWithSucess:^(NSArray *result) {
-//        [[CoreDataStack sharedCoreDataStack] insertStatusWithArrayProfile:result];
-//        //主线程加载
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self configureFetch];
-//            [self performFetch];
-//        });
-//
-//    } failure:^(NSError *error) {
-//        
-//    }];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return UITableViewAutomaticDimension;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -112,16 +107,20 @@
     
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TVcell"];
     Status *status = [self.frc objectAtIndexPath:indexPath];
-    [cell configureWithUser:status];
+    [cell configureWithStatus:status];
     
     cell.didSelectPhotoBlock = ^(TableViewCell *cell){
         [self showPhotoWithCell:cell photo:status.photo];
     };
+    //toobar收藏按钮
+
+    [cell.cellToolbar setupStarbtnWithBool:status.favorited.boolValue];
+    cell.cellToolbar.delegate = self;
+    
     return cell;
 }
 #pragma mark - imageViewerDidLongPress
-- (void)imageViewerDidLongPress:(JTSImageViewController *)imageViewer atRect:(CGRect)rect
-{
+- (void)imageViewerDidLongPress:(JTSImageViewController *)imageViewer atRect:(CGRect)rect{
     UIAlertController *altController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *saveImage = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UIImageWriteToSavedPhotosAlbum(imageViewer.image, self, nil, nil);
@@ -135,4 +134,28 @@
     [imageViewer presentViewController:altController animated:YES completion:nil];
     
 }
+
+- (void)starWithCellToolBarView:(CellToolBarView *)toolbar sender:(id)sender forEvent:(UIEvent *)event{
+    //取到收藏所在的indexpath（cell）
+    //取到所有touch
+    NSSet *touches = [event allTouches];
+    //取到其中一个touch
+    UITouch *touch = [touches anyObject];
+    //取touch的location
+    CGPoint point = [touch locationInView:self.tableView];
+    //获取点击所在位置的indexpath
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    //用frc取到cell下的status对象
+    Status *status = [self.frc objectAtIndexPath:indexPath];
+    //请求收藏接口
+    [[Service sharedInstance] starWithStatusID:status.sid sucess:^(NSArray *result) {
+        NSLog(@"%@",result);
+        [[CoreDataStack sharedCoreDataStack] insertOrUpdateWithStatusProfile:result];
+        [toolbar setupStarbtnWithBool:status.favorited.boolValue];
+
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 @end

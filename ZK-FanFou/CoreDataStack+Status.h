@@ -7,9 +7,9 @@
 //管理model
 
 #import "CoreDataStack.h"
-
+@class Status;
 @interface CoreDataStack (Status)
 - (void)insertStatusWithArrayProfile:(NSArray *)arrayProfile;
 
-
+-(Status *)insertOrUpdateWithStatusProfile:(NSDictionary *)statusProfile;
 @end

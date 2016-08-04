@@ -25,14 +25,10 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-
     return [[self.frc sections] count];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-
-
     return [[[self.frc sections] objectAtIndex:section] numberOfObjects];
 }
 
@@ -59,8 +55,7 @@
 }
 
 //didChangeObject 删除更新插入
--(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
-{
+-(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath{
     UITableView *tableView = self.tableView;
     switch (type) {
         //插入

@@ -24,27 +24,24 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAL-vf-yP3">
                         <rect key="frame" x="76" y="8" width="236" height="25"/>
-                        <color key="backgroundColor" red="0.1508629028" green="0.33575700260000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="WjU-az-Yd7"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="publish time   from iphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLE-fz-hx8">
-                        <rect key="frame" x="75" y="43" width="237" height="25"/>
-                        <color key="backgroundColor" red="0.50702348429999999" green="0.67000001669999998" blue="0.15758578449999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="dCr-EU-S05"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="publish time   from iphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLE-fz-hx8">
+                        <rect key="frame" x="75" y="43" width="237" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="dCr-EU-S05"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.40743348779999999" green="1" blue="0.20970882800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D6-rg-XW2" customClass="DTAttributedLabel">
                         <rect key="frame" x="8" y="73" width="304" height="100"/>
-                        <color key="backgroundColor" red="0.34151923849999999" green="0.9742825691" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="qpu-0A-K4s"/>
                         </constraints>
@@ -68,7 +65,6 @@
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Z6-hg-9RE" customClass="CellToolBarView">
                         <rect key="frame" x="8" y="383" width="304" height="24"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="hsO-CX-Oni"/>
                         </constraints>
@@ -108,6 +104,7 @@
                 <outlet property="photoImageHeightConstraint" destination="2fG-H7-Voz" id="ycg-zS-Ovq"/>
                 <outlet property="photoImageView" destination="pvv-hf-wM1" id="5Bh-5y-YRy"/>
                 <outlet property="publishLabel" destination="aLE-fz-hx8" id="nDp-06-kOD"/>
+                <outlet property="toolbar" destination="5Z6-hg-9RE" id="0OV-k7-e4d"/>
             </connections>
             <point key="canvasLocation" x="114" y="335"/>
         </tableViewCell>

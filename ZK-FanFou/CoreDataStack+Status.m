@@ -28,7 +28,6 @@ static NSString *const PHOTO_ENTITY = @"Photo";
     }
     return nil;
 }
-
 //插入方法
 -(Status *)insertOrUpdateWithStatusProfile:(NSDictionary *)statusProfile {
     
@@ -60,12 +59,16 @@ static NSString *const PHOTO_ENTITY = @"Photo";
     dateFormatter.dateFormat = @"E MM dd HH:mm:ssZZZZZ yyyy";
     status.created_at = [dateFormatter dateFromString:dateStr];
     
+    //
+    NSString *favStr = statusProfile[@"favorited"];
+    //bool->NSNumber
+    status.favorited = @(favStr.boolValue);
+    
     return status;
 
 }
 
-- (void)insertStatusWithArrayProfile:(NSArray *)arrayProfile
-{
+- (void)insertStatusWithArrayProfile:(NSArray *)arrayProfile {
     [arrayProfile enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.context performBlockAndWait:^{
             
@@ -82,6 +85,5 @@ static NSString *const PHOTO_ENTITY = @"Photo";
         
     }];
 }
-
 
 @end

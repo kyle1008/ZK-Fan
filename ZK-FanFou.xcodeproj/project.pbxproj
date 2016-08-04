@@ -50,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27141BF81D532E080079B8A0 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
 		27265A131D473F0200A50A33 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		27265A141D473F0200A50A33 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		27265A191D4743E600A50A33 /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
@@ -131,6 +132,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27141BF91D5394A30079B8A0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				27A9B84C1D487C1100B69BB9 /* Service.h */,
+				27A9B84D1D487C1100B69BB9 /* Service.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		27141BFA1D539A8F0079B8A0 /* APIConstant */ = {
+			isa = PBXGroup;
+			children = (
+				27A9B84F1D487DDC00B69BB9 /* APIContant.h */,
+				27A9B8501D487DDC00B69BB9 /* APIContant.m */,
+			);
+			name = APIConstant;
+			sourceTree = "<group>";
+		};
 		27265A1C1D47452300A50A33 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,17 +261,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		27A9B8521D487F4600B69BB9 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				27A9B84C1D487C1100B69BB9 /* Service.h */,
-				27A9B84D1D487C1100B69BB9 /* Service.m */,
-				27A9B84F1D487DDC00B69BB9 /* APIContant.h */,
-				27A9B8501D487DDC00B69BB9 /* APIContant.m */,
-			);
-			name = Service;
-			sourceTree = "<group>";
-		};
 		27D5B0D11D45D651008ACED3 = {
 			isa = PBXGroup;
 			children = (
@@ -275,17 +283,18 @@
 		27D5B0DC1D45D651008ACED3 /* ZK-FanFou */ = {
 			isa = PBXGroup;
 			children = (
+				27141BFA1D539A8F0079B8A0 /* APIConstant */,
+				27D5B1071D45F225008ACED3 /* Splash */,
+				27141BF91D5394A30079B8A0 /* Auth */,
+				27D5B0F61D45D6E8008ACED3 /* Login */,
+				27D5B0FB1D45E1B1008ACED3 /* Main */,
+				2782BEDB1D51BC0E00B471FF /* Compose */,
+				27265A1C1D47452300A50A33 /* CoreData */,
+				27D5B0E91D45D651008ACED3 /* Assets.xcassets */,
 				27D5B0E01D45D651008ACED3 /* AppDelegate.h */,
 				27D5B0E11D45D651008ACED3 /* AppDelegate.m */,
 				27D5B0E31D45D651008ACED3 /* ViewController.h */,
 				27D5B0E41D45D651008ACED3 /* ViewController.m */,
-				27A9B8521D487F4600B69BB9 /* Service */,
-				27265A1C1D47452300A50A33 /* CoreData */,
-				27D5B0FB1D45E1B1008ACED3 /* Main */,
-				27D5B1071D45F225008ACED3 /* Splash */,
-				2782BEDB1D51BC0E00B471FF /* Compose */,
-				27D5B0F61D45D6E8008ACED3 /* Login */,
-				27D5B0E91D45D651008ACED3 /* Assets.xcassets */,
 				27D5B0EB1D45D651008ACED3 /* LaunchScreen.storyboard */,
 				27D5B0EE1D45D651008ACED3 /* Info.plist */,
 				27D5B0DB1D45D651008ACED3 /* Products */,
@@ -673,10 +682,11 @@
 		27265A201D4748F400A50A33 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				27141BF81D532E080079B8A0 /* Model 3.xcdatamodel */,
 				2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */,
 				27265A211D4748F400A50A33 /* Model.xcdatamodel */,
 			);
-			currentVersion = 2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */;
+			currentVersion = 27141BF81D532E080079B8A0 /* Model 3.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -12,8 +12,7 @@
 
 @implementation UserTableViewCell
 
--(void)configureWithUser:(User *)user
-{
+-(void)configureWithUser:(User *)user{
     
     self.nameLabel.text = user.name;
     self.idLabel.text = user.uId;
@@ -22,8 +21,6 @@
     
     
 }
-
-
 
 - (void)awakeFromNib {
 
