@@ -19,6 +19,7 @@
 @end
 
 @implementation TimelineTableViewController
+
 -(void)creatRefreshController {
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];

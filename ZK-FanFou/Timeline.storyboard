@@ -18,11 +18,25 @@
                             <outlet property="delegate" destination="yM9-SW-SLS" id="yWr-mN-W7o"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YmQ-qP-qA4"/>
+                    <navigationItem key="navigationItem" id="YmQ-qP-qA4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="92r-HD-2rt">
+                            <connections>
+                                <segue destination="JEW-Ec-9bE" kind="presentation" id="Q4y-sx-5mN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFf-rQ-wCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083.5" y="-23.5"/>
+        </scene>
+        <!--Compose-->
+        <scene sceneID="puS-Jd-bee">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Compose" id="JEW-Ec-9bE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfC-VQ-x8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447.5" y="-233"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="3BX-le-50r">

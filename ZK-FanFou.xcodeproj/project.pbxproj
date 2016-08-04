@@ -19,6 +19,8 @@
 		2755DB151D4F1999007DB408 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB121D4F1999007DB408 /* Photo+CoreDataProperties.m */; };
 		2755DB161D4F1999007DB408 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB141D4F1999007DB408 /* Photo.m */; };
 		2755DB1F1D4F2612007DB408 /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */; };
+		2782BEDE1D51BC4000B471FF /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2782BEDD1D51BC4000B471FF /* ComposeViewController.m */; };
+		2782BEE01D51BC6600B471FF /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2782BEDF1D51BC6600B471FF /* Compose.storyboard */; };
 		278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750571D49EDE1000A5A15 /* TableViewCell.m */; };
 		2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TableViewCell.xib */; };
 		2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */; };
@@ -69,6 +71,9 @@
 		2755DB131D4F1999007DB408 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		2755DB141D4F1999007DB408 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel.xcmappingmodel; sourceTree = "<group>"; };
+		2782BEDC1D51BC4000B471FF /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		2782BEDD1D51BC4000B471FF /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		2782BEDF1D51BC6600B471FF /* Compose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
 		278750561D49EDE1000A5A15 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		278750571D49EDE1000A5A15 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		278750581D49EDE1000A5A15 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -205,6 +210,16 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
+		2782BEDB1D51BC0E00B471FF /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				2782BEDC1D51BC4000B471FF /* ComposeViewController.h */,
+				2782BEDD1D51BC4000B471FF /* ComposeViewController.m */,
+				2782BEDF1D51BC6600B471FF /* Compose.storyboard */,
+			);
+			name = Compose;
+			sourceTree = "<group>";
+		};
 		278750551D49ED2D000A5A15 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,8 +281,9 @@
 				27D5B0E41D45D651008ACED3 /* ViewController.m */,
 				27A9B8521D487F4600B69BB9 /* Service */,
 				27265A1C1D47452300A50A33 /* CoreData */,
-				27D5B1071D45F225008ACED3 /* Splash */,
 				27D5B0FB1D45E1B1008ACED3 /* Main */,
+				27D5B1071D45F225008ACED3 /* Splash */,
+				2782BEDB1D51BC0E00B471FF /* Compose */,
 				27D5B0F61D45D6E8008ACED3 /* Login */,
 				27D5B0E91D45D651008ACED3 /* Assets.xcassets */,
 				27D5B0EB1D45D651008ACED3 /* LaunchScreen.storyboard */,
@@ -405,6 +421,7 @@
 				27D5B0FA1D45D91B008ACED3 /* Timeline.storyboard in Resources */,
 				27D5B0FD1D45E1FA008ACED3 /* MentionMe.storyboard in Resources */,
 				27D5B1031D45E7BE008ACED3 /* Splash.storyboard in Resources */,
+				2782BEE01D51BC6600B471FF /* Compose.storyboard in Resources */,
 				27D5B0F81D45D840008ACED3 /* Accounts.storyboard in Resources */,
 				27D5B0ED1D45D651008ACED3 /* LaunchScreen.storyboard in Resources */,
 				278C42CA1D508E4900A11C2F /* CellToolBarView.xib in Resources */,
@@ -474,6 +491,7 @@
 				27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */,
 				27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */,
 				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
+				2782BEDE1D51BC4000B471FF /* ComposeViewController.m in Sources */,
 				2755DB151D4F1999007DB408 /* Photo+CoreDataProperties.m in Sources */,
 				27A9B84E1D487C1100B69BB9 /* Service.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,

@@ -38,8 +38,15 @@ NSString *const USER_ENTITY = @"User";
     user.name = userProfile[@"name"];
     user.uId = userProfile[@"id"];
     user.iconURL = userProfile[@"profile_image_url"];
-    user.token = token;
-    user.tokenSecret = tokenSecret;
+    //解决刷新自己写的微博报错问题
+    //1.status插入
+    //2.user插入
+    if (token) {
+        user.token = token;
+    }
+    if (tokenSecret) {
+        user.tokenSecret = tokenSecret;
+    }
 
     return user;
 }
