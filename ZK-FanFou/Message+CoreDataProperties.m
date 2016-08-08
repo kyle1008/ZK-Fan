@@ -1,5 +1,5 @@
 //
-//  Status+CoreDataProperties.m
+//  Message+CoreDataProperties.m
 //  ZK-FanFou
 //
 //  Created by Kyle.Z on 16/8/5.
@@ -9,16 +9,18 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Status+CoreDataProperties.h"
+#import "Message+CoreDataProperties.h"
 
-@implementation Status (CoreDataProperties)
+@implementation Message (CoreDataProperties)
 
 @dynamic created_at;
-@dynamic favorited;
-@dynamic sid;
-@dynamic source;
+@dynamic recipient_id;
+@dynamic mid;
+@dynamic sender_id;
+@dynamic sender_screen_name;
+@dynamic recipient_screen_name;
 @dynamic text;
-@dynamic photo;
-@dynamic user;
+@dynamic recipient;
+@dynamic sender;
 
 @end

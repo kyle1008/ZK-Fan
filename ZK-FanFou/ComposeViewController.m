@@ -40,7 +40,7 @@
 
 - (IBAction)postContent:(id)sender {
     NSData *data = UIImageJPEGRepresentation(_pickerImageView.image, 0.5);
-    [[Service sharedInstance] postData:@"QWERTYYY" imageData:data replayToStatusID:nil repostStatusID:nil sucess:^(NSArray *result) {
+    [[Service sharedInstance] postData:@"QWERTYUIO" imageData:data replayToStatusID:nil repostStatusID:nil sucess:^(NSArray *result) {
         NSLog(@"%@",result);
     } failure:^(NSError *error) {
         NSLog(@"%@",error.description);

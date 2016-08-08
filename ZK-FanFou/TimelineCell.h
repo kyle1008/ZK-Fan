@@ -1,5 +1,5 @@
 //
-//  TableViewCell.h
+//  TimelineCell.h
 //  ZK-FanFou
 //
 //  Created by Kyle.Z on 16/7/28.
@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CellToolBarView;
+@class TimelineCellToolBar;
 @class Status;
+@class User;
 @class DTAttributedLabel;
-@class TableViewCell;
-typedef void (^DidSelectPhotoBlock) (TableViewCell *cell);
+@class TimelineCell;
+@class Conversation;
+typedef void (^DidSelectPhotoBlock) (TimelineCell *cell);
 
-@interface TableViewCell : UITableViewCell
+@interface TimelineCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet CellToolBarView *toolbar;
+@property (weak, nonatomic) IBOutlet TimelineCellToolBar *toolbar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *photoImageHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
@@ -24,9 +26,8 @@ typedef void (^DidSelectPhotoBlock) (TableViewCell *cell);
 @property (weak, nonatomic) IBOutlet UILabel *publishLabel;
 @property (weak, nonatomic) IBOutlet DTAttributedLabel *contentsLabel;
 
-@property (nonatomic, weak) CellToolBarView *cellToolbar;
+@property (nonatomic, weak) TimelineCellToolBar *cellToolbar;
 @property (strong, nonatomic) DidSelectPhotoBlock didSelectPhotoBlock;
-//-(void)configureWithUser:(Status *)status;
 -(void)configureWithStatus:(Status *)status;
-//-(void)setToolbarDelegate:(CellToolBarView *)toolbar;
+
 @end

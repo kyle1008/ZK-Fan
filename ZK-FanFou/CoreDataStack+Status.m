@@ -10,8 +10,10 @@
 #import "Status.h"
 #import "CoreDataStack+User.h"
 #import "Photo.h"
-static NSString *const STATUS_ENTITY = @"Status";
-static NSString *const PHOTO_ENTITY = @"Photo";
+#import "CoreDataStack+Common.h"
+#import "EntityNameConstant.h"
+//static NSString *const STATUS_ENTITY = @"Status";
+//static NSString *const PHOTO_ENTITY = @"Photo";
 @implementation CoreDataStack (Status)
 
 -(Status *)checkImportedWithStatusID:(NSString *)sid {
@@ -58,12 +60,10 @@ static NSString *const PHOTO_ENTITY = @"Photo";
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"E MM dd HH:mm:ssZZZZZ yyyy";
     status.created_at = [dateFormatter dateFromString:dateStr];
-    
-    //
+    //status.created_at = [self dateFromString:dateStr];
     NSString *favStr = statusProfile[@"favorited"];
     //bool->NSNumber
     status.favorited = @(favStr.boolValue);
-    
     return status;
 
 }
@@ -71,18 +71,13 @@ static NSString *const PHOTO_ENTITY = @"Photo";
 - (void)insertStatusWithArrayProfile:(NSArray *)arrayProfile {
     [arrayProfile enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.context performBlockAndWait:^{
-            
             //insert status
           Status *status = [self insertOrUpdateWithStatusProfile:obj];
-            
             //insert user
            User *user = [self insertOrUpdateWithUserProfile:obj[@"user"] token:nil tokenSecret:nil];
-            
             //set up relationships
             status.user = user;
         }];
-
-        
     }];
 }
 

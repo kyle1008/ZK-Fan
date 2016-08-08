@@ -1,5 +1,5 @@
 //
-//  Status+CoreDataProperties.m
+//  Conversation+CoreDataProperties.m
 //  ZK-FanFou
 //
 //  Created by Kyle.Z on 16/8/5.
@@ -9,16 +9,13 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Status+CoreDataProperties.h"
+#import "Conversation+CoreDataProperties.h"
 
-@implementation Status (CoreDataProperties)
+@implementation Conversation (CoreDataProperties)
 
-@dynamic created_at;
-@dynamic favorited;
-@dynamic sid;
-@dynamic source;
-@dynamic text;
-@dynamic photo;
-@dynamic user;
+@dynamic msg_num;
+@dynamic new_conv;
+@dynamic otherid;
+@dynamic message;
 
 @end

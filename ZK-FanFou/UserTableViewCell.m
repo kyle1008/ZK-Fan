@@ -9,7 +9,8 @@
 #import "UserTableViewCell.h"
 #import "User.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "Conversation.h"
+#import "Message.h"
 @implementation UserTableViewCell
 
 -(void)configureWithUser:(User *)user{
@@ -19,6 +20,15 @@
     NSURL *url = [NSURL URLWithString:user.iconURL];
     [self.iconImage sd_setImageWithURL:url placeholderImage:nil options:SDWebImageRefreshCached];
     
+    
+}
+
+- (void)configureWithConversation:(Conversation *)ct {
+    self.nameLabel.text = ct.message.recipient_screen_name;
+    self.idLabel.text = ct.otherid;
+    
+    NSURL *url = [NSURL URLWithString:ct.message.recipient.iconURL];
+    [self.iconImage sd_setImageWithURL:url placeholderImage:nil options:SDWebImageRefreshCached];
     
 }
 

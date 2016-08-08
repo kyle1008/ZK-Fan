@@ -1,20 +1,22 @@
 //
-//  TableViewCell.m
+//  TimelineCell.h
 //  ZK-FanFou
 //
 //  Created by Kyle.Z on 16/7/28.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "TimelineCell.h"
 #import "User.h"
 #import "Status.h"
 #import <UIImageView+WebCache.h>
 #import "Photo.h"
 #import <DTCoreText/DTCoreText.h>
-#import "CellToolBarView.h"
-
-@implementation TableViewCell
+#import "TimelineCellToolBar.h"
+#import "Message.h"
+#import "UserTableViewCell.h"
+#import "Conversation.h"
+@implementation TimelineCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -90,16 +92,16 @@
     _didSelectPhotoBlock(self);
 }
 
--(CellToolBarView *)creatCellToolbar {
-    //取到CellToolBarView.xib中所有的view
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CellToolBarView" owner:nil options:nil];
-    CellToolBarView *cellToolbar = views[0];
+-(TimelineCellToolBar *)creatCellToolbar {
+    //取到TimelineCellToolBar.xib中所有的view
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"TimelineCellToolBar" owner:nil options:nil];
+    TimelineCellToolBar *cellToolbar = views[0];
     return cellToolbar;
 }
 
--(void)setToolbarDelegate:(CellToolBarView *)toolebar{
-    
-}
+//-(void)setToolbarDelegate:(TimelineCellToolBar *)toolebar{
+//    
+//}
 
 
 

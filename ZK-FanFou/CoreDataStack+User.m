@@ -8,8 +8,9 @@
 
 #import "CoreDataStack+User.h"
 #import "User.h"
+#import "CoreDataStack+Common.h"
+#import "EntityNameConstant.h"
 
-NSString *const USER_ENTITY = @"User";
 @implementation CoreDataStack (User)
 @dynamic currentUser;
 
@@ -30,8 +31,10 @@ NSString *const USER_ENTITY = @"User";
 
 -(User *)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret {
     
+    //检查数据库是否已有该数组
+    //没有插入一条数据，有则更新此条数据
+    User *user =  (User *)[self findUniqueEntityWithUniqueKey:@"uId" value:userProfile[@"id"] entityName:USER_ENTITY];
     
-    User *user =  [self checkImportedWithUserID:userProfile[@"id"]];
     if (!user) {
         user = [NSEntityDescription insertNewObjectForEntityForName:USER_ENTITY inManagedObjectContext:self.context];
     }
@@ -63,14 +66,16 @@ NSString *const USER_ENTITY = @"User";
     }
     return nil;
 }
-
+#pragma mark - to do
 //currentUser取值方法
 -(User *)currentUser {
     //NSString *str = [NSString stringWithFormat:@"%@", @YES];
-    User *user = [self findUniqueEntityWithUniqueID:@"isActive" value:@YES];
+//    User *user = [self findUniqueEntityWithUniqueID:@"isActive" value:@YES];
+//    return user;
+    User *user = (User *)[self findUniqueEntityWithUniqueKey:@"isActive" value:@YES entityName:USER_ENTITY];
     return user;
 }
-//
+#pragma mark - to do
 -(User *)findUserWithId:(NSString *)uId {
     User *user = [self findUniqueEntityWithUniqueID:@"uId" value:uId];
     return user;

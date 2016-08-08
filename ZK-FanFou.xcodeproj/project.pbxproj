@@ -21,14 +21,24 @@
 		2755DB1F1D4F2612007DB408 /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */; };
 		2782BEDE1D51BC4000B471FF /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2782BEDD1D51BC4000B471FF /* ComposeViewController.m */; };
 		2782BEE01D51BC6600B471FF /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2782BEDF1D51BC6600B471FF /* Compose.storyboard */; };
-		278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750571D49EDE1000A5A15 /* TableViewCell.m */; };
-		2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TableViewCell.xib */; };
+		278750591D49EDE1000A5A15 /* TimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750571D49EDE1000A5A15 /* TimelineCell.m */; };
+		2787505A1D49EDE1000A5A15 /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278750581D49EDE1000A5A15 /* TimelineCell.xib */; };
 		2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */; };
 		278750601D49F794000A5A15 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2787505E1D49F794000A5A15 /* Status.m */; };
 		278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */; };
 		278750F81D4B321D000A5A15 /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278750F71D4B321D000A5A15 /* TimelineTableViewController.m */; };
-		278C42C81D508E1E00A11C2F /* CellToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 278C42C71D508E1E00A11C2F /* CellToolBarView.m */; };
-		278C42CA1D508E4900A11C2F /* CellToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278C42C91D508E4900A11C2F /* CellToolBarView.xib */; };
+		278C42C81D508E1E00A11C2F /* TimelineCellToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 278C42C71D508E1E00A11C2F /* TimelineCellToolBar.m */; };
+		278C42CA1D508E4900A11C2F /* TimelineCellToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278C42C91D508E4900A11C2F /* TimelineCellToolBar.xib */; };
+		27A7A6AB1D545CF0005FE276 /* Conversation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6A81D545CF0005FE276 /* Conversation+CoreDataProperties.m */; };
+		27A7A6AC1D545CF0005FE276 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6AA1D545CF0005FE276 /* Conversation.m */; };
+		27A7A6B11D545D66005FE276 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6AE1D545D66005FE276 /* Message+CoreDataProperties.m */; };
+		27A7A6B21D545D66005FE276 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6B01D545D66005FE276 /* Message.m */; };
+		27A7A6B51D545E13005FE276 /* CoreDataStack+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6B41D545E13005FE276 /* CoreDataStack+Common.m */; };
+		27A7A6B81D546005005FE276 /* EntityNameConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6B71D546005005FE276 /* EntityNameConstant.m */; };
+		27A7A6BB1D5463F1005FE276 /* CoreDataStack+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6BA1D5463F1005FE276 /* CoreDataStack+Message.m */; };
+		27A7A6BE1D547001005FE276 /* CoreDataStack+Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6BD1D547001005FE276 /* CoreDataStack+Conversation.m */; };
+		27A7A6C11D547893005FE276 /* Service+Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6C01D547893005FE276 /* Service+Conversation.m */; };
+		27A7A6C41D547C2E005FE276 /* ConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A6C31D547C2E005FE276 /* ConversationListViewController.m */; };
 		27A9B84E1D487C1100B69BB9 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B84D1D487C1100B69BB9 /* Service.m */; };
 		27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9B8501D487DDC00B69BB9 /* APIContant.m */; };
 		27D5B0DF1D45D651008ACED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5B0DE1D45D651008ACED3 /* main.m */; };
@@ -75,9 +85,9 @@
 		2782BEDC1D51BC4000B471FF /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		2782BEDD1D51BC4000B471FF /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		2782BEDF1D51BC6600B471FF /* Compose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
-		278750561D49EDE1000A5A15 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		278750571D49EDE1000A5A15 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		278750581D49EDE1000A5A15 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		278750561D49EDE1000A5A15 /* TimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineCell.h; sourceTree = "<group>"; };
+		278750571D49EDE1000A5A15 /* TimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineCell.m; sourceTree = "<group>"; };
+		278750581D49EDE1000A5A15 /* TimelineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
 		2787505B1D49F794000A5A15 /* Status+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Status+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2787505C1D49F794000A5A15 /* Status+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Status+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2787505D1D49F794000A5A15 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
@@ -86,9 +96,30 @@
 		278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Status.m"; sourceTree = "<group>"; };
 		278750F61D4B321D000A5A15 /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewController.h; sourceTree = "<group>"; };
 		278750F71D4B321D000A5A15 /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
-		278C42C61D508E1E00A11C2F /* CellToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellToolBarView.h; sourceTree = "<group>"; };
-		278C42C71D508E1E00A11C2F /* CellToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellToolBarView.m; sourceTree = "<group>"; };
-		278C42C91D508E4900A11C2F /* CellToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellToolBarView.xib; sourceTree = "<group>"; };
+		278C42C61D508E1E00A11C2F /* TimelineCellToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineCellToolBar.h; sourceTree = "<group>"; };
+		278C42C71D508E1E00A11C2F /* TimelineCellToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineCellToolBar.m; sourceTree = "<group>"; };
+		278C42C91D508E4900A11C2F /* TimelineCellToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineCellToolBar.xib; sourceTree = "<group>"; };
+		27A7A6A61D545A29005FE276 /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
+		27A7A6A71D545CF0005FE276 /* Conversation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Conversation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		27A7A6A81D545CF0005FE276 /* Conversation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Conversation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		27A7A6A91D545CF0005FE276 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
+		27A7A6AA1D545CF0005FE276 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
+		27A7A6AD1D545D66005FE276 /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Message+CoreDataProperties.h"; sourceTree = "<group>"; };
+		27A7A6AE1D545D66005FE276 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		27A7A6AF1D545D66005FE276 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		27A7A6B01D545D66005FE276 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		27A7A6B31D545E13005FE276 /* CoreDataStack+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+Common.h"; sourceTree = "<group>"; };
+		27A7A6B41D545E13005FE276 /* CoreDataStack+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Common.m"; sourceTree = "<group>"; };
+		27A7A6B61D546005005FE276 /* EntityNameConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityNameConstant.h; sourceTree = "<group>"; };
+		27A7A6B71D546005005FE276 /* EntityNameConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityNameConstant.m; sourceTree = "<group>"; };
+		27A7A6B91D5463F1005FE276 /* CoreDataStack+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+Message.h"; sourceTree = "<group>"; };
+		27A7A6BA1D5463F1005FE276 /* CoreDataStack+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Message.m"; sourceTree = "<group>"; };
+		27A7A6BC1D547001005FE276 /* CoreDataStack+Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataStack+Conversation.h"; sourceTree = "<group>"; };
+		27A7A6BD1D547001005FE276 /* CoreDataStack+Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataStack+Conversation.m"; sourceTree = "<group>"; };
+		27A7A6BF1D547893005FE276 /* Service+Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Service+Conversation.h"; sourceTree = "<group>"; };
+		27A7A6C01D547893005FE276 /* Service+Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Service+Conversation.m"; sourceTree = "<group>"; };
+		27A7A6C21D547C2E005FE276 /* ConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListViewController.h; sourceTree = "<group>"; };
+		27A7A6C31D547C2E005FE276 /* ConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewController.m; sourceTree = "<group>"; };
 		27A9B84C1D487C1100B69BB9 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		27A9B84D1D487C1100B69BB9 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		27A9B84F1D487DDC00B69BB9 /* APIContant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIContant.h; sourceTree = "<group>"; };
@@ -137,6 +168,8 @@
 			children = (
 				27A9B84C1D487C1100B69BB9 /* Service.h */,
 				27A9B84D1D487C1100B69BB9 /* Service.m */,
+				27A7A6BF1D547893005FE276 /* Service+Conversation.h */,
+				27A7A6C01D547893005FE276 /* Service+Conversation.m */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -160,6 +193,10 @@
 				27265A2B1D47560000A50A33 /* CoreDataStack+User.m */,
 				278750F31D4B20E9000A5A15 /* CoreDataStack+Status.h */,
 				278750F41D4B20E9000A5A15 /* CoreDataStack+Status.m */,
+				27A7A6B91D5463F1005FE276 /* CoreDataStack+Message.h */,
+				27A7A6BA1D5463F1005FE276 /* CoreDataStack+Message.m */,
+				27A7A6BC1D547001005FE276 /* CoreDataStack+Conversation.h */,
+				27A7A6BD1D547001005FE276 /* CoreDataStack+Conversation.m */,
 				274F400A1D489EBD0055518E /* Generic TVControllers */,
 			);
 			name = CoreData;
@@ -170,6 +207,18 @@
 			children = (
 				2755DB1E1D4F2612007DB408 /* MappingModel.xcmappingmodel */,
 				27265A201D4748F400A50A33 /* Model.xcdatamodeld */,
+				27A7A6B61D546005005FE276 /* EntityNameConstant.h */,
+				27A7A6B71D546005005FE276 /* EntityNameConstant.m */,
+				27A7A6B31D545E13005FE276 /* CoreDataStack+Common.h */,
+				27A7A6B41D545E13005FE276 /* CoreDataStack+Common.m */,
+				27A7A6AD1D545D66005FE276 /* Message+CoreDataProperties.h */,
+				27A7A6AE1D545D66005FE276 /* Message+CoreDataProperties.m */,
+				27A7A6AF1D545D66005FE276 /* Message.h */,
+				27A7A6B01D545D66005FE276 /* Message.m */,
+				27A7A6A71D545CF0005FE276 /* Conversation+CoreDataProperties.h */,
+				27A7A6A81D545CF0005FE276 /* Conversation+CoreDataProperties.m */,
+				27A7A6A91D545CF0005FE276 /* Conversation.h */,
+				27A7A6AA1D545CF0005FE276 /* Conversation.m */,
 				2755DB111D4F1999007DB408 /* Photo+CoreDataProperties.h */,
 				2755DB121D4F1999007DB408 /* Photo+CoreDataProperties.m */,
 				2755DB131D4F1999007DB408 /* Photo.h */,
@@ -198,9 +247,13 @@
 		2755DB0F1D4F13D5007DB408 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				278750561D49EDE1000A5A15 /* TableViewCell.h */,
-				278750571D49EDE1000A5A15 /* TableViewCell.m */,
-				278750581D49EDE1000A5A15 /* TableViewCell.xib */,
+				278750561D49EDE1000A5A15 /* TimelineCell.h */,
+				27D5B1071D45F225008ACED3 /* Splash */,
+				278750571D49EDE1000A5A15 /* TimelineCell.m */,
+				278750581D49EDE1000A5A15 /* TimelineCell.xib */,
+				278C42C61D508E1E00A11C2F /* TimelineCellToolBar.h */,
+				278C42C71D508E1E00A11C2F /* TimelineCellToolBar.m */,
+				278C42C91D508E4900A11C2F /* TimelineCellToolBar.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -225,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				27D5B0FE1D45E3CD008ACED3 /* Message.storyboard */,
+				27A7A6C21D547C2E005FE276 /* ConversationListViewController.h */,
+				27A7A6C31D547C2E005FE276 /* ConversationListViewController.m */,
 			);
 			name = Message;
 			sourceTree = "<group>";
@@ -246,19 +301,8 @@
 				278750F71D4B321D000A5A15 /* TimelineTableViewController.m */,
 				27D5B0F91D45D91B008ACED3 /* Timeline.storyboard */,
 				2755DB0F1D4F13D5007DB408 /* Cell */,
-				278C42C51D508DF200A11C2F /* View */,
 			);
 			name = Timeline;
-			sourceTree = "<group>";
-		};
-		278C42C51D508DF200A11C2F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				278C42C61D508E1E00A11C2F /* CellToolBarView.h */,
-				278C42C71D508E1E00A11C2F /* CellToolBarView.m */,
-				278C42C91D508E4900A11C2F /* CellToolBarView.xib */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		27D5B0D11D45D651008ACED3 = {
@@ -284,12 +328,12 @@
 			isa = PBXGroup;
 			children = (
 				27141BFA1D539A8F0079B8A0 /* APIConstant */,
-				27D5B1071D45F225008ACED3 /* Splash */,
+				27265A1C1D47452300A50A33 /* CoreData */,
 				27141BF91D5394A30079B8A0 /* Auth */,
 				27D5B0F61D45D6E8008ACED3 /* Login */,
+				2755DB1B1D4F1E1C007DB408 /* Message */,
 				27D5B0FB1D45E1B1008ACED3 /* Main */,
 				2782BEDB1D51BC0E00B471FF /* Compose */,
-				27265A1C1D47452300A50A33 /* CoreData */,
 				27D5B0E91D45D651008ACED3 /* Assets.xcassets */,
 				27D5B0E01D45D651008ACED3 /* AppDelegate.h */,
 				27D5B0E11D45D651008ACED3 /* AppDelegate.m */,
@@ -332,7 +376,6 @@
 				27D5B0E61D45D651008ACED3 /* Main.storyboard */,
 				2755DB191D4F1E02007DB408 /* MentionMe */,
 				2755DB1A1D4F1E13007DB408 /* Me */,
-				2755DB1B1D4F1E1C007DB408 /* Message */,
 				278750551D49ED2D000A5A15 /* Timeline */,
 			);
 			name = Main;
@@ -426,14 +469,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D5B0F51D45D6A3008ACED3 /* Login.storyboard in Resources */,
-				2787505A1D49EDE1000A5A15 /* TableViewCell.xib in Resources */,
+				2787505A1D49EDE1000A5A15 /* TimelineCell.xib in Resources */,
 				27D5B0FA1D45D91B008ACED3 /* Timeline.storyboard in Resources */,
 				27D5B0FD1D45E1FA008ACED3 /* MentionMe.storyboard in Resources */,
 				27D5B1031D45E7BE008ACED3 /* Splash.storyboard in Resources */,
 				2782BEE01D51BC6600B471FF /* Compose.storyboard in Resources */,
 				27D5B0F81D45D840008ACED3 /* Accounts.storyboard in Resources */,
 				27D5B0ED1D45D651008ACED3 /* LaunchScreen.storyboard in Resources */,
-				278C42CA1D508E4900A11C2F /* CellToolBarView.xib in Resources */,
+				278C42CA1D508E4900A11C2F /* TimelineCellToolBar.xib in Resources */,
 				27D5B1011D45E448008ACED3 /* Me.storyboard in Resources */,
 				27D5B0EA1D45D651008ACED3 /* Assets.xcassets in Resources */,
 				27D5B0FF1D45E3CD008ACED3 /* Message.storyboard in Resources */,
@@ -499,29 +542,39 @@
 			files = (
 				27265A271D47558400A50A33 /* User+CoreDataProperties.m in Sources */,
 				27265A151D473F0200A50A33 /* UserTableViewCell.m in Sources */,
+				27A7A6BE1D547001005FE276 /* CoreDataStack+Conversation.m in Sources */,
 				27265A2C1D47560000A50A33 /* CoreDataStack+User.m in Sources */,
+				27A7A6B11D545D66005FE276 /* Message+CoreDataProperties.m in Sources */,
 				2782BEDE1D51BC4000B471FF /* ComposeViewController.m in Sources */,
 				2755DB151D4F1999007DB408 /* Photo+CoreDataProperties.m in Sources */,
 				27A9B84E1D487C1100B69BB9 /* Service.m in Sources */,
 				27D5B0E51D45D651008ACED3 /* ViewController.m in Sources */,
 				278750F51D4B20E9000A5A15 /* CoreDataStack+Status.m in Sources */,
+				27A7A6C41D547C2E005FE276 /* ConversationListViewController.m in Sources */,
 				27D5B0E21D45D651008ACED3 /* AppDelegate.m in Sources */,
+				27A7A6B51D545E13005FE276 /* CoreDataStack+Common.m in Sources */,
 				2755DB161D4F1999007DB408 /* Photo.m in Sources */,
+				27A7A6AB1D545CF0005FE276 /* Conversation+CoreDataProperties.m in Sources */,
 				27265A1F1D47455500A50A33 /* CoreDataStack.m in Sources */,
-				278C42C81D508E1E00A11C2F /* CellToolBarView.m in Sources */,
+				278C42C81D508E1E00A11C2F /* TimelineCellToolBar.m in Sources */,
+				27A7A6B81D546005005FE276 /* EntityNameConstant.m in Sources */,
 				278750601D49F794000A5A15 /* Status.m in Sources */,
 				27D5B0DF1D45D651008ACED3 /* main.m in Sources */,
 				27265A281D47558400A50A33 /* User.m in Sources */,
 				27265A221D4748F400A50A33 /* Model.xcdatamodeld in Sources */,
 				27D5B1061D45F214008ACED3 /* SplashViewController.m in Sources */,
+				27A7A6C11D547893005FE276 /* Service+Conversation.m in Sources */,
 				2787505F1D49F794000A5A15 /* Status+CoreDataProperties.m in Sources */,
 				278750F81D4B321D000A5A15 /* TimelineTableViewController.m in Sources */,
 				27265A1B1D4743E600A50A33 /* AccountsTableViewController.m in Sources */,
 				27A9B8511D487DDC00B69BB9 /* APIContant.m in Sources */,
-				278750591D49EDE1000A5A15 /* TableViewCell.m in Sources */,
+				278750591D49EDE1000A5A15 /* TimelineCell.m in Sources */,
 				27D5B10A1D45F9F4008ACED3 /* LoginViewController.m in Sources */,
+				27A7A6BB1D5463F1005FE276 /* CoreDataStack+Message.m in Sources */,
+				27A7A6AC1D545CF0005FE276 /* Conversation.m in Sources */,
 				2755DB1F1D4F2612007DB408 /* MappingModel.xcmappingmodel in Sources */,
 				274F40091D489EAA0055518E /* CoreDataTableViewController.m in Sources */,
+				27A7A6B21D545D66005FE276 /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,11 +735,12 @@
 		27265A201D4748F400A50A33 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				27A7A6A61D545A29005FE276 /* Model 4.xcdatamodel */,
 				27141BF81D532E080079B8A0 /* Model 3.xcdatamodel */,
 				2755DB101D4F1732007DB408 /* Model 2.xcdatamodel */,
 				27265A211D4748F400A50A33 /* Model.xcdatamodel */,
 			);
-			currentVersion = 27141BF81D532E080079B8A0 /* Model 3.xcdatamodel */;
+			currentVersion = 27A7A6A61D545A29005FE276 /* Model 4.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

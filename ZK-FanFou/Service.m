@@ -15,7 +15,7 @@
 @implementation Service
 //1.获取Service单例对象
 +(instancetype)sharedInstance {
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     static Service *service;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -25,7 +25,7 @@
 }
 //初始化
 -(instancetype)init {
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     self = [super init];
     if (self) {
         NSURLSessionConfiguration *cfg = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -75,7 +75,7 @@
     }];
     
     [task resume];
-NSLog(@"%s",__func__);}
+}
 #pragma mark -BASE REQUEST requestWithPath:parameters:accessToken:tokenSecret:
 -(void)requestWithPath:(NSString *)path parameters:(NSDictionary *)parameters accessToken:(NSString *)accessToken tokenSecret:(NSString *)tokenSecret requestMethod:(NSString *)requestMethod sucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
     NSURLRequest *request = [TDOAuth URLRequestForPath:path parameters:parameters host:FANFOU_API_HOST consumerKey:CONSUMER_KEY consumerSecret:CONSUMER_SECRET accessToken:accessToken tokenSecret:tokenSecret scheme:@"http" requestMethod:requestMethod dataEncoding:TDOAuthContentTypeUrlEncodedForm headerValues:nil signatureMethod:TDOAuthSignatureMethodHmacSha1];
@@ -107,14 +107,13 @@ NSLog(@"%s",__func__);}
         NSLog(@"%@",result);
         sucess(result);
     }
-}];
-[task resume];
-    
-NSLog(@"%s",__func__);}
+    }];
+    [task resume];
+}
 //请求home， time，
 -(void)requestStatusWithSucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
     [self requestWithPath:API_HOME_TIMELINE parameters:@{@"mode":@"lite",@"count":@60,@"format":@"html"} requestMethod:@"GET" sucess:sucess failure:failure];
-NSLog(@"%s",__func__);}
+}
 #pragma mark - POST DATA
 //post photo
 - (void)postPhotoWithPath:(NSString *)path parameters:(NSDictionary *)parameters sucess:(void (^)(NSArray *result))sucess failure:(void (^)(NSError *error))failure imageData:(NSData *)imageData{
@@ -146,7 +145,7 @@ NSLog(@"%s",__func__);}
     }];
     
     [task resume];
-NSLog(@"%s",__func__);}
+}
 
 #pragma mark - POST photo
 -(void) postData:(NSString *)text imageData:(NSData *)imageData replayToStatusID:(NSString *)replayToStatusID repostStatusID:(NSString *)repostStatusID sucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure {
@@ -168,11 +167,11 @@ NSLog(@"%s",__func__);}
         User *user = [CoreDataStack sharedCoreDataStack].currentUser;
         [self requestWithPath:API_UPDATE_TEXT parameters:parameters accessToken:user.token tokenSecret:user.tokenSecret requestMethod:@"POST" sucess:sucess failure:failure];
     }
-NSLog(@"%s",__func__);}
+}
 #pragma mark - PhotoUpload 
 //图片上传的表单格式构造
 - (NSData *)createBodyWithBoundary:(NSString *)boundary parameters:(NSDictionary *)parameters data:(NSData *)data fileName:(NSString *)fileName{
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     NSMutableData *httpBody = [NSMutableData data];
     [parameters enumerateKeysAndObjectsUsingBlock:^(NSString *parameterKey, NSString *parameterValue, BOOL *stop) {
         [httpBody appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -189,12 +188,12 @@ NSLog(@"%s",__func__);}
 }
 //
 - (NSString *)generateBoundaryString{
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     return [NSString stringWithFormat:@"Boundary-%@", [[NSUUID UUID] UUIDString]];
 }
 //收藏
 -(void)starWithStatusID:(NSString *)statusID sucess:(void(^)(NSArray *result))sucess failure:(void(^)(NSError *error))failure {
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     NSString *path = [NSString stringWithFormat:@"%@:%@.json", API_FAVORITES_CREATE, statusID];
     [self requestWithPath:path parameters:nil requestMethod:@"POST" sucess:sucess failure:failure];
 }

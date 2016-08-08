@@ -14,14 +14,15 @@
 
 #import "TimelineTableViewController.h"
 #import "CoreDataStack+Status.h"
-#import "TableViewCell.h"
+#import "TimelineCell.h"
 #import "Status.h"
 #import "Photo.h"
 #import "Service.h"
 #import <JTSImageViewController/JTSImageViewController.h>
 #import <SDImageCache.h>
-#import "CellToolBarView.h"
-@interface TimelineTableViewController () <JTSImageViewControllerInteractionsDelegate,CellToolBarDelegate>
+#import "TimelineCellToolBar.h"
+
+@interface TimelineTableViewController () <JTSImageViewControllerInteractionsDelegate,TimelineCellToolBarDelegate>
 
 @end
 
@@ -57,7 +58,7 @@
     [self creatRefreshController];
     
     //加载xib
-    UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
+    UINib *nib = [UINib nibWithNibName:@"TimelineCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"TVcell"];
     self.tableView.estimatedRowHeight = 100;
     //动态改变Cell高度[自适应高度]
@@ -88,7 +89,7 @@
     
 }
 
--(void)showPhotoWithCell:(TableViewCell *)cell photo:(Photo *)photo{
+-(void)showPhotoWithCell:(TimelineCell *)cell photo:(Photo *)photo{
     JTSImageInfo *imageInfo = [[JTSImageInfo alloc] init];
     UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:photo.largeurl];
     if (image) {
@@ -105,11 +106,11 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TVcell"];
+    TimelineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TVcell"];
     Status *status = [self.frc objectAtIndexPath:indexPath];
     [cell configureWithStatus:status];
     
-    cell.didSelectPhotoBlock = ^(TableViewCell *cell){
+    cell.didSelectPhotoBlock = ^(TimelineCell *cell){
         [self showPhotoWithCell:cell photo:status.photo];
     };
     //toobar收藏按钮
@@ -135,7 +136,7 @@
     
 }
 
-- (void)starWithCellToolBarView:(CellToolBarView *)toolbar sender:(id)sender forEvent:(UIEvent *)event{
+- (void)starWithTimelineCellToolBar:(TimelineCellToolBar *)toolbar sender:(id)sender forEvent:(UIEvent *)event{
     //取到收藏所在的indexpath（cell）
     //取到所有touch
     NSSet *touches = [event allTouches];
@@ -148,7 +149,7 @@
     //用frc取到cell下的status对象
     Status *status = [self.frc objectAtIndexPath:indexPath];
     //请求收藏接口
-    [[Service sharedInstance] starWithStatusID:status.sid sucess:^(NSArray *result) {
+    [[Service sharedInstance] starWithStatusID:status.sid sucess:^(id result) {
         NSLog(@"%@",result);
         [[CoreDataStack sharedCoreDataStack] insertOrUpdateWithStatusProfile:result];
         [toolbar setupStarbtnWithBool:status.favorited.boolValue];
