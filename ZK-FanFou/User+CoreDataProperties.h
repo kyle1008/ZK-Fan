@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.h
 //  ZK-FanFou
 //
-//  Created by Kyle.Z on 16/8/5.
+//  Created by Kyle.Z on 16/8/9.
 //  Copyright © 2016年 kyle. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *token;
 @property (nullable, nonatomic, retain) NSString *tokenSecret;
 @property (nullable, nonatomic, retain) NSString *uId;
+@property (nullable, nonatomic, retain) NSNumber *favourites_count;
+@property (nullable, nonatomic, retain) NSNumber *friends_count;
+@property (nullable, nonatomic, retain) NSNumber *statuses_count;
+@property (nullable, nonatomic, retain) NSNumber *followers_count;
 @property (nullable, nonatomic, retain) NSSet<Status *> *statuses;
 
 @end

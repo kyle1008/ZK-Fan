@@ -71,7 +71,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="iconImage" destination="eA4-mA-ymd" id="gO5-43-WoG"/>
+                                    <outlet property="iconImageView" destination="eA4-mA-ymd" id="jiv-8C-ON2"/>
                                     <outlet property="idLabel" destination="3fi-U7-yYb" id="pAT-0C-CQG"/>
                                     <outlet property="nameLabel" destination="NVL-Pf-HjY" id="LgJ-p5-8uB"/>
                                     <segue destination="nFS-qU-I7x" kind="presentation" id="fnh-ip-2gc"/>

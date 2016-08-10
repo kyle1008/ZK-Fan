@@ -7,8 +7,9 @@
 //
 
 #import "CoreDataTableViewController.h"
+#import <ARSegmentPager/ARSegmentPageController.h>
+@interface TimelineTableViewController : CoreDataTableViewController <ARSegmentControllerDelegate>
 
-@interface TimelineTableViewController : CoreDataTableViewController
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 

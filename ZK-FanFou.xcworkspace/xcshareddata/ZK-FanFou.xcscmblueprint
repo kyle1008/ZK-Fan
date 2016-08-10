@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BF91497FEED3341AF1BE25F9CE0196B33F420C6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5AF6FA29A02B62B28EE777AD856DBEAFBB0A0AF" : 0,
+    "BF91497FEED3341AF1BE25F9CE0196B33F420C6D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "19D17D61-13EA-4F74-949F-093EB1B03AF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A5AF6FA29A02B62B28EE777AD856DBEAFBB0A0AF" : "..\/Documents\/KYPFanfou-lesson12",
+    "BF91497FEED3341AF1BE25F9CE0196B33F420C6D" : "ZK-FanFou\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZK-FanFou",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZK-FanFou.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Jaykong\/KYPFanfou",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5AF6FA29A02B62B28EE777AD856DBEAFBB0A0AF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kyle1008\/ZK-Fan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF91497FEED3341AF1BE25F9CE0196B33F420C6D"
+    }
+  ]
+}

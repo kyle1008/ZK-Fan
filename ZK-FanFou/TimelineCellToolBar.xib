@@ -15,7 +15,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="143" height="65"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="转发">
-                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="repost:forEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="59t-5x-fMA"/>
@@ -25,7 +25,7 @@
                     <rect key="frame" x="143" y="0.0" width="142" height="65"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="回复">
-                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="reply:forEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="tHC-Uh-Qfo"/>
@@ -35,7 +35,7 @@
                     <rect key="frame" x="285" y="0.0" width="143" height="65"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="收藏">
-                        <color key="titleColor" red="1" green="0.2404947905" blue="0.1687922147" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="star:forEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="edU-xx-yu7"/>

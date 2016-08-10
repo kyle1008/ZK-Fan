@@ -27,7 +27,7 @@
     //NSString 转成 NSNumber(int)
     conv.msg_num = @(msg_num.integerValue);
     conv.new_conv = @(new_conv.boolValue);
-    Message *msg = [self insertOrUpdateWithMessageProfile:msgProfile];
+    Message *msg = [self insertOrUpdateMessageWithProfile:msgProfile];
     conv.message = msg;
     return conv;
 }

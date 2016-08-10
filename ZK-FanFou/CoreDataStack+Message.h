@@ -9,5 +9,7 @@
 #import "CoreDataStack.h"
 @class Message;
 @interface CoreDataStack (Message)
--(Message *)insertOrUpdateWithMessageProfile:(NSDictionary *)profile;
+-(Message *)insertOrUpdateMessageWithProfile:(NSDictionary *)profile;
+- (void)addMessagesWithArrayProfile:(NSArray *)profile;
+- (NSArray *)fetchMessagesWithUserID:(NSString *)userID;
 @end

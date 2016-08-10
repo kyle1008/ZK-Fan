@@ -11,4 +11,7 @@ pod 'AFNetworking', '~> 3.0'
 pod 'SDWebImage'
 pod 'JTSImageViewController'
 pod 'DTCoreText'
+pod 'TTTAttributedLabel'
+pod 'JSQMessagesViewController'
+pod 'ARSegmentPager', :git => 'https://github.com/AugustRush/ARSegmentPager.git'
 end

@@ -18,7 +18,6 @@
 
 +(instancetype)sharedCoreDataStack{
     
-
     static CoreDataStack *coreDataStack = nil;//默认值为nil，可不写
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

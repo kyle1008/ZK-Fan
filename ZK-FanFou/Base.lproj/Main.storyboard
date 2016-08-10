@@ -36,20 +36,20 @@
             </objects>
             <point key="canvasLocation" x="195" y="837"/>
         </scene>
-        <!--Me-->
+        <!--Message-->
         <scene sceneID="Ypz-cM-wCR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Me" id="hOV-u1-6cO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Message" id="hOV-u1-6cO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" id="ojj-hg-Du8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thC-S5-ENf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476.5" y="837"/>
         </scene>
-        <!--Message-->
+        <!--Me-->
         <scene sceneID="3Zo-W5-rIO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Message" id="IPy-rs-Qda" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Me" id="IPy-rs-Qda" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Message" id="wRN-yV-rxJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mk6-U6-bx7" userLabel="First Responder" sceneMemberID="firstResponder"/>

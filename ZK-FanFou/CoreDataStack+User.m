@@ -28,7 +28,7 @@
     }
     return nil;
 }
-
+//插入用户数据
 -(User *)insertOrUpdateWithUserProfile:(NSDictionary *)userProfile token:(NSString *)token tokenSecret:(NSString *)tokenSecret {
     
     //检查数据库是否已有该数组
@@ -41,7 +41,10 @@
     user.name = userProfile[@"name"];
     user.uId = userProfile[@"id"];
     user.iconURL = userProfile[@"profile_image_url"];
-    //解决刷新自己写的微博报错问题
+    user.followers_count = userProfile[@"followers_count"];
+    user.friends_count = userProfile[@"friends_count"];
+    user.statuses_count = userProfile[@"statuses_count"];
+    
     //1.status插入
     //2.user插入
     if (token) {
@@ -66,16 +69,16 @@
     }
     return nil;
 }
-#pragma mark - to do
+#pragma mark - currentUser
 //currentUser取值方法
 -(User *)currentUser {
     //NSString *str = [NSString stringWithFormat:@"%@", @YES];
 //    User *user = [self findUniqueEntityWithUniqueID:@"isActive" value:@YES];
 //    return user;
-    User *user = (User *)[self findUniqueEntityWithUniqueKey:@"isActive" value:@YES entityName:USER_ENTITY];
-    return user;
+    User *currentUser = (User *)[self findUniqueEntityWithUniqueKey:@"isActive" value:@YES entityName:USER_ENTITY];
+    return currentUser;
 }
-#pragma mark - to do
+#pragma mark - findUserWithId
 -(User *)findUserWithId:(NSString *)uId {
     User *user = [self findUniqueEntityWithUniqueID:@"uId" value:uId];
     return user;

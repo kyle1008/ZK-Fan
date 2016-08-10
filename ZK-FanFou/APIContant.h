@@ -23,3 +23,10 @@ FOUNDATION_EXTERN NSString *const API_UPLOAD_PHOTO;
 //FOUNDATION_EXTERN NSString *const API_FAVORITES_CREATE;
 extern NSString *const API_FAVORITES_CREATE;
 extern NSString *const API_CONVERSATION_LIST;
+extern NSString *const API_CONVERSATION;
+//0.https://github.com/FanfouAPI/FanFouAPIDoc/wiki/direct-messages.new
+//1.
+extern NSString *const API_MESSAGES_NEW;
+
+extern NSString *const API_PHOTOS_TIMELINE;
+

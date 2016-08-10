@@ -9,10 +9,10 @@
 #import "ConversationListViewController.h"
 #import "Service+Conversation.h"
 #import "CoreDataStack+Conversation.h"
-//#import "Message.h"
-//#import "Conversation.h"
+#import "Conversation.h"
 #import "UserTableViewCell.h"
 #import "EntityNameConstant.h"
+#import "MessageViewController.h"
 @interface ConversationListViewController ()
 
 @end
@@ -49,13 +49,21 @@
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
     Conversation *ct =  [self.frc objectAtIndexPath:indexPath];
     [cell configureWithConversation:ct];
-    
     return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - prepareForSugue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    MessageViewController *messageViewController = segue.destinationViewController;
+    messageViewController.hidesBottomBarWhenPushed = YES;
+    Conversation *ct =  [self.frc objectAtIndexPath:indexPath];
+    messageViewController.userID = ct.otherid;
 }
 
 @end

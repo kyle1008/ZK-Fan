@@ -11,7 +11,7 @@
 @class Conversation;
 
 @interface UserTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 

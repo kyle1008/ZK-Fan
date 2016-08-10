@@ -10,4 +10,9 @@
 
 @interface Service (Conversation)
 -(void)conversationListSucess:(void (^)(NSArray *result)) sucess failure:(void (^)(NSError *error)) failure;
+
+- (void)conversationsWithUserID:(NSString *)userID sucess:(void(^)(NSArray *))sucess failure:(void (^)(NSError *error))failure;
+
+- (void)postConversationWithUserID:(NSString *)userID text:(NSString *)text  sucess:(void(^)(id result))sucess inReplyID:(NSString *)inReplyID failure:(void (^)(NSError *error))failure;
+
 @end

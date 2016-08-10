@@ -28,10 +28,13 @@
 
 @implementation TimelineTableViewController
 
--(void)creatRefreshController {
+//增加下拉刷新
+- (void)creatRefreshController {
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新..."];
     [self.refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    
+    
 }
 
 -(void)refreshData {
@@ -48,6 +51,7 @@
             [self performFetch];
         });
     } failure:^(NSError *error) {
+        
     
     }];
 }
@@ -71,16 +75,9 @@
     return UITableViewAutomaticDimension;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(void)configureFetch {
-    
-    
+
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"Status"];
-    
     NSArray *descriptors = @[[[NSSortDescriptor alloc] initWithKey:@"created_at" ascending:NO]];//ascending:NO 发布时间倒序排列
     fr.sortDescriptors = descriptors;
     self.frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fr managedObjectContext:[CoreDataStack sharedCoreDataStack].context  sectionNameKeyPath:nil cacheName:nil];
@@ -159,4 +156,8 @@
     }];
 }
 
+#pragma mark - <ARSegmentControllerDelegate>
+- (NSString *)segmentTitle {
+    return @"时间线";
+}
 @end

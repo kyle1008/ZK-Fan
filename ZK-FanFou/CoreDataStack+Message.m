@@ -13,8 +13,9 @@
 #import "CoreDataStack+User.h"
 #import "User.h"
 @implementation CoreDataStack (Message)
--(Message *)insertOrUpdateWithMessageProfile:(NSDictionary *)profile {
-    NSString *mid = profile[@"mid"];
+
+-(Message *)insertOrUpdateMessageWithProfile:(NSDictionary *)profile {
+    NSString *mid = profile[@"id"];
     NSString *text = profile[@"text"];
     NSString *sender_id = profile[@"sender_id"];
     NSString *recipient_id = profile[@"recipient_id"];
@@ -45,5 +46,26 @@
     msg.recipient = recipient;
     
     return msg;
+}
+
+- (void)addMessagesWithArrayProfile:(NSArray *)profile  {
+    [profile enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.context performBlockAndWait:^{
+            [self insertOrUpdateMessageWithProfile:obj];
+            
+        }];
+        
+    }];
+    
+}
+
+//对话的人可以是recipient_id也可以是sender_id
+- (NSArray *)fetchMessagesWithUserID:(NSString *)userID {
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"recipient_id = %@ OR sender_id = %@",userID,userID];
+    
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"created_at" ascending:YES];
+    
+    
+    return [self fetchObjectsWithPredicate:pre sortDescriptors:@[descriptor] entityName:MESSAGE_ENTITY];
 }
 @end
